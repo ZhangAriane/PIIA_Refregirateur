@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-image: #77bee4; -fx-border-radius: 30;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.FXMLViewer">
+
+   <children>
+      <Separator prefWidth="200.0" />
+      <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="3.0">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Line>
+      <Text fill="#835ce4" layoutX="77.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gratin de pates au poulet" wrappingWidth="267.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <BorderPane layoutX="112.0" layoutY="135.0" prefHeight="94.0" prefWidth="162.0" />
+      <BorderPane layoutX="54.0" layoutY="343.0" prefHeight="147.0" prefWidth="139.0" />
+      <Text fill="#6b39eb" layoutX="125.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-stroke-line-join: blue;" wrappingWidth="151.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Button layoutX="152.0" layoutY="519.0" mnemonicParsing="false" style="-fx-background-color: lightgreen; -fx-border-color: Blue;" text="Cuisiner" textFill="#2985e1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="7.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="340.0" layoutY="4.0" mnemonicParsing="false" opacity="0.64" prefHeight="31.0" prefWidth="32.0" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <TextFlow layoutX="6.0" layoutY="143.0" prefHeight="362.0" prefWidth="390.0" />
+      <Button layoutX="24.0" layoutY="80.0" mnemonicParsing="false" opacity="0.69" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="1" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="64.0" layoutY="73.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="129.0" style="-fx-background-color: lightgreen; -fx-background-radius: 30px;" text="personne" textFill="#2985e1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="211.0" layoutY="80.0" mnemonicParsing="false" opacity="0.66" style="-fx-background-color: red; -fx-background-radius: 50;" text="—" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="257.0" layoutY="77.0" mnemonicParsing="false" opacity="0.48" prefHeight="3.0" prefWidth="18.0" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
