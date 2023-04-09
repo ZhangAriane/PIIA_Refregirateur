@@ -12,10 +12,10 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.Controle.ListeRecettes">
    <children>
       <Separator prefWidth="200.0" />
-      <Button layoutX="174.0" layoutY="396.0" mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+">
+      <Button fx:id="ajouterRecette" layoutX="174.0" layoutY="396.0" mnemonicParsing="false" onAction="#allerPageAjouterRecette" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+">
          <font>
             <Font size="27.0" />
          </font>
@@ -35,17 +35,17 @@
             <Font size="19.0" />
          </font>
       </Text>
-      <Button layoutX="336.0" layoutY="130.0" mnemonicParsing="false" style="-fx-background-color: red; -fx-background-radius: 50;" text="—" textFill="#1b1a1a">
+      <Button fx:id="suprimmerRecette1" layoutX="336.0" layoutY="130.0" mnemonicParsing="false" onAction="#suprimmerRecette" style="-fx-background-color: red; -fx-background-radius: 50;" text="—" textFill="#1b1a1a">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="22.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
+      <Button fx:id="revenirArriereListeRectte" layoutX="22.0" layoutY="9.0" mnemonicParsing="false" onAction="#allerPageAccueil" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="336.0" layoutY="194.0" mnemonicParsing="false" style="-fx-background-color: red; -fx-background-radius: 50;" text="—" textFill="#1b1a1a">
+      <Button fx:id="suprimmerRecette2" layoutX="336.0" layoutY="194.0" mnemonicParsing="false" onAction="#suprimmerRecette" style="-fx-background-color: red; -fx-background-radius: 50;" text="—" textFill="#1b1a1a">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -60,7 +60,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
-      <ImageView fitHeight="43.0" fitWidth="52.0" layoutX="301.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="panier" fitHeight="43.0" fitWidth="52.0" layoutX="301.0" layoutY="502.0" onDragDetected="#allerPageListeCourse" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Ressources/chariot.jpg" />
          </image>
@@ -85,7 +85,7 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="337.0" layoutY="261.0" mnemonicParsing="false" style="-fx-background-color: red; -fx-background-radius: 50;" text="—" textFill="#1b1a1a">
+      <Button fx:id="suprimmerRecette3" layoutX="337.0" layoutY="261.0" mnemonicParsing="false" onAction="#suprimmerRecette" style="-fx-background-color: red; -fx-background-radius: 50;" text="—" textFill="#1b1a1a">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

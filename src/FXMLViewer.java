@@ -7,26 +7,38 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class FXMLViewer extends Application {
+	public TextField nomAjouterRecette;
+	public TextField quantiteAjouterRecette1;
+	public Button validerAjouterRecette;
+	public TextField ingredientAjouterRecette1;
+	public TextField ingredientAjouterRecette2;
+	public TextField ingredientAjouterRecette3;
+	public TextField quantiteAjouterRecette2;
+	public TextField quantiteAjouterRecette3;
+	public Button annulerAjouterRecette;
+	public Button ajouterIngredient;
 
-	private static final String FXML_FILE_PATH1 = "/src/FXML/Ajoutez_un_Aliment.fxml";
-	private static final String FXML_FILE_PATH2 = "/src/FXML/Ajoutez_une_Recette.fxml";
-	private static final String FXML_FILE_PATH3 = "/src/FXML/Liste_de_Course.fxml";
-	private static final String FXML_FILE_PATH4 = "/src/FXML/Liste_de_Recettes.fxml";
-
-	private Scene scene1;
-	private Scene scene2;
-	private Scene scene3;
-	private Scene scene4;
-	@FXML
-	private Button validerButton;
-
+	/*
+        private static final String FXML_FILE_PATH1 = "/src/FXML/Ajoutez_un_Aliment.fxml";
+        private static final String FXML_FILE_PATH2 = "/src/FXML/Ajoutez_une_Recette.fxml";
+        private static final String FXML_FILE_PATH3 = "/src/FXML/Liste_de_Course.fxml";
+        private static final String FXML_FILE_PATH4 = "/src/FXML/Liste_de_Recettes.fxml";
+    
+        private Scene scene1;
+        private Scene scene2;
+        private Scene scene3;
+        private Scene scene4;
+        @FXML
+        private Button validerButton;
+    */
 	@Override
-	public void start(Stage primaryStage) throws Exception {
+	public void start(Stage primaryStage) throws Exception {/*
 		// Load FXML files and create scenes
 		Parent root1 = FXMLLoader.load(getClass().getResource(FXML_FILE_PATH1));
 		scene1 = new Scene(root1);
@@ -41,10 +53,10 @@ public class FXMLViewer extends Application {
 		scene4 = new Scene(root4);
 
 		// Set scene1 as the initial scene
-		primaryStage.setScene(scene2);
-		primaryStage.show();
+		primaryStage.setScene(scene1);
+		primaryStage.show();*/
 	}
-
+/*
 	@FXML
 	private void handleValidation(ActionEvent event) throws IOException {
 		// Load Liste_de_Recettes.fxml and set it as the new scene
@@ -55,9 +67,19 @@ public class FXMLViewer extends Application {
 		stage.setScene(scene);
 		stage.show();
 	}
-
+*/
 
 		public static void main(String[] args) {
 		launch(args);
+	}
+
+
+	public void validerAjouterRecette(ActionEvent actionEvent) {
+	}
+
+	public void annulerAjouterRecette(ActionEvent actionEvent) {
+	}
+
+	public void ajouterIngredient(ActionEvent actionEvent) {
 	}
 }

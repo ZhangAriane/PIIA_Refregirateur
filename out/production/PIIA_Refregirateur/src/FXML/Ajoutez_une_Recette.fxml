@@ -11,7 +11,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.FXMLViewer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.Controle.AjouterRecette">
 
    <children>
       <Separator prefWidth="200.0" />
@@ -35,17 +35,17 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <TextField layoutX="48.0" layoutY="127.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow;" text="Soupe de tomates">
+      <TextField fx:id="nomAjouterRecette" layoutX="48.0" layoutY="127.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow;" text="Soupe de tomates">
          <font>
             <Font name="System Font" size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="264.0" layoutY="219.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="500g">
+      <TextField fx:id="quantiteAjouterRecette1" layoutX="264.0" layoutY="219.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="500g">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Button fx:id="validerButton" layoutX="256.0" layoutY="467.0" mnemonicParsing="false" onAction="#handleValidation" style="-fx-background-color: lightblue;" text="Valider" textFill="#2985e1">
+      <Button fx:id="validerAjouterRecette" layoutX="256.0" layoutY="467.0" mnemonicParsing="false" onAction="#validerAjouterRecette" style="-fx-background-color: lightblue;" text="Valider" textFill="#2985e1">
          <font>
             <Font size="24.0" />
          </font>
@@ -62,37 +62,37 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <TextField layoutX="59.0" layoutY="219.0" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: lightyellow;" text="Tomates">
+      <TextField fx:id="ingredientAjouterRecette1" layoutX="59.0" layoutY="219.0" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: lightyellow;" text="Tomates">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="56.0" layoutY="273.0" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: lightyellow;" text="Oignon">
+      <TextField fx:id="ingredientAjouterRecette2" layoutX="56.0" layoutY="273.0" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: lightyellow;" text="Oignon">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="56.0" layoutY="330.0" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: lightyellow;" text="Ail">
+      <TextField fx:id="ingredientAjouterRecette3" layoutX="56.0" layoutY="330.0" prefHeight="27.0" prefWidth="126.0" style="-fx-background-color: lightyellow;" text="Ail">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="264.0" layoutY="273.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="1/2">
+      <TextField fx:id="quantiteAjouterRecette2" layoutX="264.0" layoutY="273.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="1/2">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="264.0" layoutY="330.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="1g">
+      <TextField fx:id="quantiteAjouterRecette3" layoutX="264.0" layoutY="330.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="1g">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Button layoutX="45.0" layoutY="467.0" mnemonicParsing="false" style="-fx-background-color: #E6E6FA;" text="Annuler" textFill="#2985e1">
+      <Button fx:id="annulerAjouterRecette" layoutX="45.0" layoutY="467.0" mnemonicParsing="false" onAction="#annulerAjouterRecette" style="-fx-background-color: #E6E6FA;" text="Annuler" textFill="#2985e1">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="185.0" layoutY="464.0" mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+">
+      <Button fx:id="ajouterIngredient" layoutX="185.0" layoutY="464.0" mnemonicParsing="false" onAction="#ajouterIngredient" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+">
          <font>
             <Font size="27.0" />
          </font>

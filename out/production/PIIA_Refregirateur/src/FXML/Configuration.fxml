@@ -12,7 +12,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.Controle.Configuration">
    <children>
       <Separator prefWidth="200.0" />
       <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="3.0">
@@ -50,12 +50,12 @@
             <Image url="@../Ressources/Familial.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="69.0" layoutY="310.0" mnemonicParsing="false" style="-fx-background-color: #E6E6FA;" text="Etudiant" textFill="#2985e1">
+      <Button fx:id="etudiant" layoutX="69.0" layoutY="310.0" mnemonicParsing="false" style="-fx-background-color: #E6E6FA;" text="Etudiant" textFill="#2985e1">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="236.0" layoutY="310.0" mnemonicParsing="false" style="-fx-background-color: #E6E6FA;" text="Familial" textFill="#2985e1">
+      <Button fx:id="familial" layoutX="236.0" layoutY="310.0" mnemonicParsing="false" style="-fx-background-color: #E6E6FA;" text="Familial" textFill="#2985e1">
          <font>
             <Font size="24.0" />
          </font>
@@ -70,12 +70,12 @@
             <ColorAdjust />
          </effect>
       </Line>
-      <Button layoutX="107.0" layoutY="505.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: pink;" text="Terminer" textFill="#0d5da8">
+      <Button fx:id="terminerConfiguration" layoutX="107.0" layoutY="505.0" mnemonicParsing="false" onAction="#terminerConfiguration" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: pink;" text="Terminer" textFill="#0d5da8">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <TextField layoutX="107.0" layoutY="451.0" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: lightblue;" text="Entrez un chiffre">
+      <TextField fx:id="nbPersonne" layoutX="107.0" layoutY="451.0" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: lightblue;" text="Entrez un chiffre">
          <font>
             <Font name="System Font" size="24.0" />
          </font>

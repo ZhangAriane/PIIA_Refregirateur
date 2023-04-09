@@ -11,7 +11,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.Controle.AjouterAliment">
    <children>
       <Separator prefWidth="200.0" />
       <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="3.0">
@@ -29,11 +29,11 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <TextField layoutX="48.0" layoutY="127.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow; -fx-border-color: blue;" text="Oignon">
+      <TextField fx:id="nomAjouterAliment" layoutX="48.0" layoutY="127.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow; -fx-border-color: blue;" text="Oignon">
          <font>
             <Font name="System Font" size="18.0" />
          </font></TextField>
-      <Button layoutX="222.0" layoutY="480.0" mnemonicParsing="false" style="-fx-background-color: lightblue;" text="Valider" textFill="#2985e1">
+      <Button fx:id="validerAjouterAliment" layoutX="222.0" layoutY="480.0" mnemonicParsing="false" onAction="#validerAjouterAliment" style="-fx-background-color: lightblue;" text="Valider" textFill="#2985e1">
          <font>
             <Font size="24.0" />
          </font>
@@ -48,12 +48,12 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <Button layoutX="50.0" layoutY="480.0" mnemonicParsing="false" style="-fx-background-color: #E6E6FA;" text="Annuler" textFill="#2985e1">
+      <Button fx:id="annulerAjouterAliment" layoutX="50.0" layoutY="480.0" mnemonicParsing="false" onAction="#annulerAjouterAliment" style="-fx-background-color: #E6E6FA;" text="Annuler" textFill="#2985e1">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <TextField layoutX="50.0" layoutY="224.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow; -fx-border-color: blue;" text="Fruits et légumes">
+      <TextField fx:id="typeAjouterAliment" layoutX="50.0" layoutY="224.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow; -fx-border-color: blue;" text="Fruits et légumes">
          <font>
             <Font name="System Font" size="18.0" />
          </font>
@@ -63,12 +63,12 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <TextField layoutX="50.0" layoutY="320.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow; -fx-border-color: blue;" text="2*2">
+      <TextField fx:id="tailleAjouterAliment" layoutX="50.0" layoutY="320.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow; -fx-border-color: blue;" text="2*2">
          <font>
             <Font name="System Font" size="18.0" />
          </font>
       </TextField>
-      <TextField layoutX="50.0" layoutY="418.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow; -fx-border-color: blue;" text="Oignon">
+      <TextField fx:id="uniteAjouterAliment" layoutX="50.0" layoutY="418.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow; -fx-border-color: blue;" text="Oignon">
          <font>
             <Font name="System Font" size="18.0" />
          </font>

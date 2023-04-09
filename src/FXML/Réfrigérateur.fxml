@@ -11,7 +11,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.FXMLViewer">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.Controle.Refrigerateur">
 
    <children>
       <Separator prefWidth="200.0" />
@@ -27,12 +27,12 @@
       </Text>
 
 
-      <Button layoutX="27.0" layoutY="12.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
+      <Button fx:id="revenirArriereRefrigerateur" layoutX="27.0" layoutY="12.0" mnemonicParsing="false" onAction="#allerPageAccueil" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="325.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+">
+      <Button fx:id="ajouterAlimentRefrigerateur" layoutX="325.0" layoutY="9.0" mnemonicParsing="false" onAction="#allerPageAjouterAliment" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+">
          <font>
             <Font size="27.0" />
          </font>
