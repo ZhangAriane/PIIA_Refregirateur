@@ -21,6 +21,7 @@ public class ListeCourse {
     public TextField ingredientCourse5;
     public Button acheter;
     public Button ajouterCourse;
+    public Button revenirArriereListeCourse;
 
     public void acheter(ActionEvent actionEvent) {
         // Charger le fichier FXML de la nouvelle interface
@@ -54,6 +55,28 @@ public class ListeCourse {
 
             // Obtenir la scène courante
             Scene sceneCourante = ajouterCourse.getScene();
+
+            // Créer une nouvelle scène à partir de la racine de l'arborescence de nœuds
+            Scene nouvelleScene = new Scene(racine);
+
+            // Remplacer la scène courante par la nouvelle scène
+            Stage fenetrePrincipale = (Stage) sceneCourante.getWindow();
+            fenetrePrincipale.setScene(nouvelleScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void allerPageAccueil(ActionEvent actionEvent) {
+        // Charger le fichier FXML de la nouvelle interface
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(FXML_FILE_PATH1));
+
+        try {
+            // Obtenir la racine de l'arborescence de nœuds
+            Parent racine = loader.load();
+
+            // Obtenir la scène courante
+            Scene sceneCourante = revenirArriereListeCourse.getScene();
 
             // Créer une nouvelle scène à partir de la racine de l'arborescence de nœuds
             Scene nouvelleScene = new Scene(racine);

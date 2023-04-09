@@ -26,8 +26,9 @@ public class AjouterRecette {
     public Button validerAjouterRecette;
     public Button annulerAjouterRecette;
     public Button ajouterIngredient;
+    public Button revenirArriereAjouterRecette;
 
-    public void validerAjouterRecette(ActionEvent actionEvent) {
+    public void validerAjouterRecette() {
         // Charger le fichier FXML de la nouvelle interface
         FXMLLoader loader = new FXMLLoader(getClass().getResource(FXML_FILE_PATH));
 
@@ -72,5 +73,27 @@ public class AjouterRecette {
     }
 
     public void ajouterIngredient() {
+    }
+
+    public void allerPageListeRecette() {
+        // Charger le fichier FXML de la nouvelle interface
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(FXML_FILE_PATH));
+
+        try {
+            // Obtenir la racine de l'arborescence de nœuds
+            Parent racine = loader.load();
+
+            // Obtenir la scène courante
+            Scene sceneCourante = revenirArriereAjouterRecette.getScene();
+
+            // Créer une nouvelle scène à partir de la racine de l'arborescence de nœuds
+            Scene nouvelleScene = new Scene(racine);
+
+            // Remplacer la scène courante par la nouvelle scène
+            Stage fenetrePrincipale = (Stage) sceneCourante.getWindow();
+            fenetrePrincipale.setScene(nouvelleScene);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

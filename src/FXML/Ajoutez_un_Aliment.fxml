@@ -38,7 +38,7 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="27.0" layoutY="12.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
+      <Button fx:id="revenirArriereAjouterAliment" layoutX="27.0" layoutY="12.0" mnemonicParsing="false" onAction="#allerPageRefrigerateur" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
          <font>
             <Font size="24.0" />
          </font>

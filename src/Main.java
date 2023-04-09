@@ -9,8 +9,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    private static String FXML_FILE_PATH = "/src/FXML/Accueil.fxml";
-    private static String FXML_FILE_PATH1 = "/src/FXML/Ajoutez_un_Aliment.fxml";
+    private static String FXML_FILE_PATH = "/src/FXML/Configuration.fxml";
+    private static String FXML_FILE_PATH1 = "/src/FXML/Accueil.fxml";
 
     private Scene scene;
 
