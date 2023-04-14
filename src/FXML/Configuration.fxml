@@ -75,7 +75,7 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <TextField fx:id="nbPersonne" layoutX="107.0" layoutY="451.0" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: lightblue;" text="Entrez un chiffre">
+      <TextField fx:id="nbPersonne" alignment="CENTER" layoutX="107.0" layoutY="451.0" onAction="#entrerNbPersonne" prefHeight="45.0" prefWidth="200.0" promptText="Entrez 1-10" style="-fx-background-color: lightblue;">
          <font>
             <Font name="System Font" size="24.0" />
          </font>

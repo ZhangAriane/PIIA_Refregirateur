@@ -1,12 +1,15 @@
 package src.Controle;
 
+import javafx.collections.transformation.TransformationList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import src.Model.Model;
 
 import java.io.IOException;
 
@@ -18,6 +21,7 @@ public class Configuration {
     public TextField nbPersonne;
 
     public Button terminerConfiguration;
+
 
     public void terminerConfiguration(ActionEvent actionEvent) {
         // Charger le fichier FXML de la nouvelle interface
@@ -39,5 +43,16 @@ public class Configuration {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    public void entrerNbPersonne(ActionEvent event) {
+            String input = nbPersonne.getText();
+            try {
+                int number = Integer.parseInt(input);
+                Model.getInstance().setNbPersonne(number);
+                System.out.println("nbPersonne est : " +  Model.getInstance().getnbPersonne());
+            } catch (NumberFormatException ex) {
+                System.out.println("Please enter a number");
+            }
     }
 }

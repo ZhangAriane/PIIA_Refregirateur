@@ -54,7 +54,7 @@
       </Line>
       <VBox layoutX="277.0" layoutY="65.0" prefHeight="347.0" prefWidth="123.0">
          <children>
-            <GridPane gridLinesVisible="true" prefHeight="351.0" prefWidth="121.0" style="-fx-background-color: lightblue; -fx-border-color: blue;" VBox.vgrow="ALWAYS">
+            <GridPane fx:id="Bouteilles" gridLinesVisible="true" prefHeight="351.0" prefWidth="121.0" style="-fx-background-color: lightblue; -fx-border-color: blue;" VBox.vgrow="ALWAYS">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -75,7 +75,7 @@
             </GridPane>
          </children>
       </VBox>
-      <GridPane gridLinesVisible="true" layoutY="415.0" opacity="0.75" prefHeight="183.0" prefWidth="400.0" style="-fx-background-color: lightgreen; visibility: red;">
+      <GridPane fx:id="Fruits_et_légumes" gridLinesVisible="true" layoutY="415.0" opacity="0.75" prefHeight="183.0" prefWidth="400.0" style="-fx-background-color: lightgreen; visibility: red;">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -89,7 +89,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <GridPane gridLinesVisible="true" layoutX="2.0" layoutY="185.0" opacity="0.57" prefHeight="224.0" prefWidth="272.0" style="-fx-background-color: pink; visibility: red;">
+      <GridPane fx:id="Viandes" gridLinesVisible="true" layoutX="2.0" layoutY="185.0" opacity="0.57" prefHeight="224.0" prefWidth="272.0" style="-fx-background-color: pink; visibility: red;">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -102,7 +102,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <GridPane gridLinesVisible="true" layoutX="2.0" layoutY="64.0" prefHeight="116.0" prefWidth="272.0" style="-fx-background-color: lightyellow; visibility: red;">
+      <GridPane fx:id="Pates" gridLinesVisible="true" layoutX="2.0" layoutY="64.0" prefHeight="116.0" prefWidth="272.0" style="-fx-background-color: lightyellow; visibility: red;">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
