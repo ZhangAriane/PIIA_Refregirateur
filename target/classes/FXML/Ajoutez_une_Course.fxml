@@ -11,7 +11,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="ajouterAliment" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.AjouterAliment">
+<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.AjouterCourse">
    <children>
       <Separator prefWidth="200.0" />
       <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="3.0">
@@ -38,7 +38,7 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Button fx:id="revenirArriereAjouterAliment" ellipsisString="&lt;" layoutX="24.0" layoutY="8.0" mnemonicParsing="false" onAction="#allerPageRefrigerateur" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
+      <Button fx:id="revenirArriereAjouterAliment" ellipsisString="&lt;" layoutX="24.0" layoutY="8.0" mnemonicParsing="false" onAction="#allerPageListeRecette" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
          <font>
             <Font size="24.0" />
          </font>

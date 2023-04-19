@@ -15,7 +15,7 @@ public abstract class ChangePage {
     /**
      * Change d'interface
      * @param path chemin de l'interface
-     * @param button
+     * @param button bouton qui déclenche l'action du changement de page
      */
     public void changePage(String path, Button button ){
         // Charger le fichier FXML de la nouvelle interface
@@ -42,7 +42,7 @@ public abstract class ChangePage {
     /**
      * Change d'interface
      * @param path chemin d'interface
-     * @param image
+     * @param image bouton qui déclenche l'action du changement de page
      */
     public void changePage(String path, ImageView image ){
         // Charger le fichier FXML de la nouvelle interface

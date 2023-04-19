@@ -1,17 +1,11 @@
 package Controle;
 
-import javafx.collections.transformation.TransformationList;
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import Model.Model;
 
-import java.io.IOException;
 
 public class Configuration extends ChangePage {
     private static final String FXML_FILE_PATH = "/FXML/Accueil.fxml";
@@ -23,12 +17,12 @@ public class Configuration extends ChangePage {
     public Button terminerConfiguration;
 
 
-    public void terminerConfiguration(ActionEvent actionEvent) {
+    public void terminerConfiguration() {
         changePage(FXML_FILE_PATH,terminerConfiguration);
 
     }
     @FXML
-    public void entrerNbPersonne(ActionEvent event) {
+    public void entrerNbPersonne() {
             String input = nbPersonne.getText();
             try {
                 int number = Integer.parseInt(input);

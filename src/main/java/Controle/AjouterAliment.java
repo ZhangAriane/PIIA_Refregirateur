@@ -18,12 +18,13 @@ public class AjouterAliment extends ChangePage {
     private static final String FXML_FILE_PATH = "/FXML/Réfrigérateur.fxml";
 
     public Button validerAjouterAliment;
-    public Button annulerAjouterAliment;
+    public Button revenirArriereAjouterAliment;
+
     public TextField nomAjouterAliment;
     public TextField typeAjouterAliment;
     public TextField tailleAjouterAliment;
     public TextField uniteAjouterAliment;
-    public Button revenirArriereAjouterAliment;
+
 
 
 
@@ -33,12 +34,8 @@ public class AjouterAliment extends ChangePage {
     }
 
 
-    public void annulerAjouterAliment() {
-        changePage(FXML_FILE_PATH,annulerAjouterAliment);
-    }
-
     public void allerPageRefrigerateur() {
-        changePage(FXML_FILE_PATH,annulerAjouterAliment);
+        changePage(FXML_FILE_PATH,revenirArriereAjouterAliment);
     }
 
     private Stage getStage() {
@@ -112,6 +109,4 @@ public class AjouterAliment extends ChangePage {
             stage.close();
         }
     }
-
-
 }

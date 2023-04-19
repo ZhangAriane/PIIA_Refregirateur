@@ -1,4 +1,4 @@
-package Model.json;
+package Model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -16,14 +16,7 @@ public class Ingredient {
         this.quantite = quantite;
         this.unite = unite;
     }
-/*
 
-    public Ingredient(String nomIngredient, int quantite, String unite) {
-        this.nomIngredient = nomIngredient;
-        this.quantite = quantite;
-        this.unite = unite;
-    }
-*/
     @Override
     public String toString() {
         return "Ingredient{" +

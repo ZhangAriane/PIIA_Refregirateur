@@ -65,7 +65,7 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <Button fx:id="bouttonAjouterIngredient" layoutX="342.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#ajouterIngredient" style="-fx-background-radius: 50; -fx-background-color: yellow;" text="ok" />
+      <Button fx:id="ajouterIngredient" layoutX="342.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#ajouterIngredient" style="-fx-background-radius: 50; -fx-background-color: yellow;" text="ok" />
       <ListView fx:id="listeIngredients" layoutX="-1.0" layoutY="218.0" prefHeight="323.0" prefWidth="400.0" />
    </children>
 </AnchorPane>

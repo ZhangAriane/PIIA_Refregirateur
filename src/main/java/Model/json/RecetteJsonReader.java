@@ -1,57 +1,27 @@
 package Model.json;
 
+import Model.Ingredient;
+import Model.Recette;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicReferenceArray;
+
 
 public class RecetteJsonReader {
 
-/*
 
-    public static void readJsonFile() {
-        try {
-            //Lecture du fichier JSON
-            File file = new File("src/main/resources/json/recettes.json");
-
-            ObjectMapper objectMapper = new ObjectMapper();
-
-            recettes = objectMapper.readValue(file, Recette[].class);
-/*
-            System.out.println(recettes);
-            System.out.println(recettes.length);
-            System.out.println(recettes[0].getIngredients()[0].getNomIngredient());
-
- */
-            /*
-
-            JsonNode jsonNode = objectMapper.readTree(file);
-
-            for(int i=0; i< jsonNode.size();i++){
-                recettes.add(jsonNode.get(i).get("nomRecette").asText());
-                //System.out.println(jsonNode.get(i).get("nomRecette").asText());
-                //Ingredient[] ingredients = objectMapper.readValue(jsonNode.get(i).get("ingredients"),Ingredient[].class)
-                //System.out.println(jsonNode.get(i).get("ingredients"));
-            }
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-*/
-
-
+    /**
+     * Lit le fichier json et renvoie tous les noms de recette
+     * @return la liste des noms de recette
+     */
     public static ArrayList<String> getNomRecette(){
-        ArrayList<String> nomRecettes = new ArrayList<String>();
+        ArrayList<String> nomRecettes = new ArrayList<>();
         try {
             //Lecture du fichier JSON existant
             File file = new File("src/main/resources/json/recettes.json");
@@ -61,8 +31,8 @@ public class RecetteJsonReader {
             ArrayList<Recette> recettes  = objectMapper.readValue(file, new TypeReference<ArrayList<Recette>>() {});
 
 
-            for(int i=0; i<recettes.size();i++){
-                nomRecettes.add(recettes.get(i).getNomRecette());
+            for (Recette recette : recettes) {
+                nomRecettes.add(recette.getNomRecette());
             }
 
         }catch (IOException e) {
@@ -71,6 +41,11 @@ public class RecetteJsonReader {
         return nomRecettes;
     }
 
+    /**
+     * Cherche la recette correspondante au nom de recette
+     * @param nomRecette nom de la recette
+     * @return recette
+     */
     public static Recette getRecette(String nomRecette){
         try {
             //Lecture du fichier JSON existant
@@ -81,9 +56,9 @@ public class RecetteJsonReader {
             ArrayList<Recette> recettes  = objectMapper.readValue(file, new TypeReference<ArrayList<Recette>>() {});
 
 
-            for(int i=0; i<recettes.size();i++){
-                if(recettes.get(i).getNomRecette().equals(nomRecette))
-                    return recettes.get(i);
+            for (Recette recette : recettes) {
+                if (recette.getNomRecette().equals(nomRecette))
+                    return recette;
             }
 
         }catch (IOException e) {
@@ -92,6 +67,10 @@ public class RecetteJsonReader {
         return null;
     }
 
+    /**
+     * Supprime une recette du fichier json
+     * @param nomRecette le nom de la recette a supprimé
+     */
     public static void removeRecette(String nomRecette){
         try {
             //Lecture du fichier JSON existant
@@ -118,6 +97,11 @@ public class RecetteJsonReader {
         }
     }
 
+    /**
+     * Ajoute une recette au fichier json
+     * @param nom nom de la recette
+     * @param ingredients les ingrédients de la recette
+     */
     public static void addRecette(String nom, ArrayList<Ingredient> ingredients){
         try {
             //Lecture du fichier JSON existant
@@ -129,7 +113,6 @@ public class RecetteJsonReader {
 
             //ajoute une recette
             recettes.add(new Recette(nom,ingredients));
-
 
             //mise à jour du fichier json
             JsonGenerator jsonGenerator = objectMapper.getFactory().createGenerator(

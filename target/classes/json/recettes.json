@@ -75,15 +75,181 @@
     "quantite" : 500,
     "unite" : "g"
   } ]
-}, {
-  "nomRecette" : "Soupe",
+},{
+  "nomRecette" : "Nêm au poulet",
   "ingredients" : [ {
-    "nomIngredient" : "a",
-    "quantite" : 1,
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
     "unite" : "g"
   }, {
-    "nomIngredient" : "b",
-    "quantite" : 2,
+    "nomIngredient" : "pate",
+    "quantite" : 500,
     "unite" : "g"
   } ]
-} ]
+}, {
+  "nomRecette" : "Couscous au poulet",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Poisson Pané",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Burger",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Chausson épinard",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Lasagne",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Ratatouille",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+},{
+  "nomRecette" : "Curry jaune de crevette",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Saumon grillé au brocolis",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Tartare de thon",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Pizza à la tapenade",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Sauce tomate pour pâtes",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Gambas sautés à l'ail",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Soupe de mais au chorizo",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+},{
+  "nomRecette" : "Pizza jambon fromage",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Sauté d'agneau",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}
+]
