@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ListeRecettes">
+   <children>
+      <Button fx:id="revenirArriereListeRecette" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#allerPageAccueil" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" />
+      <Button fx:id="ajouterRecette" layoutX="340.0" layoutY="14.0" mnemonicParsing="false" onAction="#allerPageAjouterRecette" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+" />
+      <Line endX="400.0" layoutY="60.0" />
+      <ImageView fx:id="panier" fitHeight="45.0" fitWidth="54.0" layoutX="329.0" layoutY="541.0" onMouseClicked="#allerPageListeCourse" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/chariot.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#5e3f72" layoutX="101.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste de Recettes" textAlignment="CENTER" wrappingWidth="200.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <ListView fx:id="listeRecette" layoutX="14.0" layoutY="69.0" prefHeight="472.0" prefWidth="378.0" />
+      <Button fx:id="boutonAfficher" layoutX="90.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#afficherDetailleRecette" style="-fx-background-color: lightgreen; -fx-background-radius: 50;" text="Afficher" />
+      <Button fx:id="boutonSupprimer" layoutX="229.0" layoutY="548.0" mnemonicParsing="false" onMouseClicked="#supprimerRecette" style="-fx-background-radius: 50; -fx-background-color: red;" text="Supprimer" />
+   </children>
+</AnchorPane>

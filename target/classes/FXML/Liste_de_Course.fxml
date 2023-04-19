@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ListeCourse">
+   <children>
+      <Separator prefWidth="200.0" />
+      <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="3.0">
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </Line>
+      <Text fill="#835ce4" layoutX="113.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste de Course" wrappingWidth="200.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Text fill="#3e0b8a" fontSmoothingType="LCD" layoutX="85.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredients" wrappingWidth="137.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Text fill="#3e0b8a" fontSmoothingType="LCD" layoutX="263.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Qualité" wrappingWidth="100.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <TextField fx:id="ingredientCourse1" layoutX="81.0" layoutY="129.0" prefHeight="27.0" prefWidth="145.0" style="-fx-background-color: lightGreen;" text="Carotte">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="ingredientCourse2" layoutX="81.0" layoutY="189.0" prefHeight="27.0" prefWidth="145.0" style="-fx-background-color: lightGreen;" text="Lait">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="270.0" layoutY="133.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="1/2" />
+      <TextField layoutX="270.0" layoutY="194.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="0.1L" />
+      <TextField fx:id="ingredientCourse3" layoutX="85.0" layoutY="252.0" prefHeight="27.0" prefWidth="145.0" style="-fx-background-color: pink;" text="Tomates">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="ingredientCourse4" layoutX="85.0" layoutY="315.0" prefHeight="27.0" prefWidth="145.0" style="-fx-background-color: pink;" text="Farine">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="ingredientCourse5" layoutX="85.0" layoutY="373.0" prefHeight="27.0" prefWidth="145.0" style="-fx-background-color: pink;" text="Ail">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="270.0" layoutY="256.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="500g" />
+      <TextField layoutX="270.0" layoutY="320.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="10g" />
+      <TextField layoutX="270.0" layoutY="377.0" prefHeight="27.0" prefWidth="87.0" style="-fx-background-color: lightyellow;" text="1g" />
+      <Button fx:id="acheter" layoutX="157.0" layoutY="473.0" mnemonicParsing="false" onAction="#acheter" style="-fx-background-color: lightblue;" text="Acheter" textFill="#2985e1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="ajouterCourse" layoutX="344.0" layoutY="17.0" mnemonicParsing="false" onAction="#ajouterCourse" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="revenirArriereListeCourse" ellipsisString="&lt;" layoutX="18.0" layoutY="5.0" mnemonicParsing="false" onAction="#allerPageAccueil" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="42.0" layoutY="133.0" mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="1" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="42.0" layoutY="193.0" mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="2" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="44.0" layoutY="256.0" mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="3" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="44.0" layoutY="315.0" mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="4" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="44.0" layoutY="377.0" mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="5" textFill="#1b1a1a">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

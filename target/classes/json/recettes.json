@@ -1,0 +1,89 @@
+[ {
+  "nomRecette" : "Gratin de pates au poulet",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Salade César",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Tarte aux poireaux et aux lardons",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Tacos mexicains",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Omelette",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Salade de pâtes au thon",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Samoussa au boeuf",
+  "ingredients" : [ {
+    "nomIngredient" : "poulet",
+    "quantite" : 500,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "pate",
+    "quantite" : 500,
+    "unite" : "g"
+  } ]
+}, {
+  "nomRecette" : "Soupe",
+  "ingredients" : [ {
+    "nomIngredient" : "a",
+    "quantite" : 1,
+    "unite" : "g"
+  }, {
+    "nomIngredient" : "b",
+    "quantite" : 2,
+    "unite" : "g"
+  } ]
+} ]
