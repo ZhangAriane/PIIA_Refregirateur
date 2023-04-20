@@ -57,7 +57,7 @@ public class AjouterRecette extends ChangePage implements Initializable {
         for (Aliment aliment : ingredients) {
             String ingredient = aliment.getNom();
             int unite = aliment.getUnite();
-            listeIngredients.getItems().add(ingredient + " " + unite);
+            listeIngredients.getItems().add(ingredient );
         }
     }
 }

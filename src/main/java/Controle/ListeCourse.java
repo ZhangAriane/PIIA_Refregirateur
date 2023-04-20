@@ -49,7 +49,6 @@ public class ListeCourse extends ChangePage implements Initializable {
         ArrayList<String> ingredients = CourseJsonReader.getListeCourse();
         for (String ingredient : ingredients) {
             listeCourse.getItems().add(ingredient);
-            System.out.println(ingredient);
         }
     }
 

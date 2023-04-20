@@ -3,9 +3,4 @@
   "type" : "Fruits et légumes",
   "taille" : 1,
   "unite" : 1
-}, {
-  "nom" : "Eau",
-  "type" : "Bouteilles",
-  "taille" : 1,
-  "unite" : 1
 } ]

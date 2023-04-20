@@ -30,7 +30,7 @@ public class CourseJsonReader {
 
 
             for (Aliment aliment : aliments) {
-                ingredients.add(aliment.getNom() + " " + aliment.getUnite());
+                ingredients.add(aliment.getNom());
 
             }
 

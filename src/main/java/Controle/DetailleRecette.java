@@ -3,9 +3,14 @@ package Controle;
 import Model.Aliment;
 import Model.Recette;
 import Model.json.RecetteJsonReader;
+import Model.json.RefrigerateurJsonReader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
 import java.net.URL;
@@ -45,7 +50,7 @@ public class DetailleRecette extends ChangePage implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         afficheRecette();
-
+        metCouleur();
     }
 
     private void afficheRecette(){
@@ -60,8 +65,34 @@ public class DetailleRecette extends ChangePage implements Initializable {
             String nom = ingredient.getNom();
             String unite = Integer.toString(ingredient.getUnite());
 
-            listeIngredients.getItems().add(nom + " " + unite);
+            listeIngredients.getItems().add(nom);
+
+            }
+
         }
 
-    }
+    /**
+     * Change la couleur de la ligne de la liste
+     * si l'ingrédient est dans le réfrigérateur, affiche en vert
+     * sinon en rouge
+     */
+    private void metCouleur(){
+            listeIngredients.setCellFactory(listeIngredients -> new ListCell<String>(){
+                @Override
+                protected void updateItem(String item, boolean empty){
+                    super.updateItem(item, empty);
+                    setText(item);
+                    if (!empty) {
+                        System.out.println(getText());
+                        // Change la couleur de fond en fonction du stock du réfrigérateur
+                        if(RefrigerateurJsonReader.exist(getText()))
+                            setBackground(new Background(new BackgroundFill(Color.GREEN, null, null)));
+                        else
+                            setBackground(new Background(new BackgroundFill(Color.RED, null, null)));
+                    }
+                }
+            });
+        }
+
+
 }
