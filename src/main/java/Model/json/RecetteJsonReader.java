@@ -1,7 +1,6 @@
 package Model.json;
 
-import Model.Aliment;
-import Model.Ingredient;
+
 import Model.Recette;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -100,10 +99,9 @@ public class RecetteJsonReader {
 
     /**
      * Ajoute une recette au fichier json
-     * @param nom nom de la recette
-     * @param ingredients les ingrédients de la recette
+     * @param recette à ajouter
      */
-    public static void addRecette(String nom, ArrayList<Aliment> ingredients){
+    public static void addRecette(Recette recette){
         try {
             //Lecture du fichier JSON existant
             File file = new File("src/main/resources/json/recettes.json");
@@ -113,7 +111,7 @@ public class RecetteJsonReader {
             ArrayList<Recette> recettes  = objectMapper.readValue(file, new TypeReference<ArrayList<Recette>>() {});
 
             //ajoute une recette
-            recettes.add(new Recette(nom,ingredients));
+            recettes.add(recette);
 
             //mise à jour du fichier json
             JsonGenerator jsonGenerator = objectMapper.getFactory().createGenerator(

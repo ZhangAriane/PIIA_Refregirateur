@@ -1,16 +1,9 @@
 package Controle;
 
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import Model.json.RefrigerateurJsonReader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-import javafx.scene.text.Font;
-import javafx.stage.Stage;
 import Model.Aliment;
-import Model.Model;
 import java.io.IOException;
 
 
@@ -38,6 +31,19 @@ public class AjouterAliment extends ChangePage {
         changePage(FXML_FILE_PATH,revenirArriereAjouterAliment);
     }
 
+    /**
+     * Ajouter un aliment au fichier json
+     */
+    public void ajouterAliment(){
+        String nom = nomAjouterAliment.getText();
+        String type = typeAjouterAliment.getText();
+        int taille = Integer.parseInt(tailleAjouterAliment.getText());
+        int unite = Integer.parseInt(uniteAjouterAliment.getText());
+
+        RefrigerateurJsonReader.addAliment(new Aliment(nom,type,taille,unite));
+        System.out.println(nom);
+    }
+/*
     private Stage getStage() {
         Scene sceneCourante = nomAjouterAliment.getScene();
         if (sceneCourante != null) {
@@ -109,4 +115,6 @@ public class AjouterAliment extends ChangePage {
             stage.close();
         }
     }
+
+ */
 }

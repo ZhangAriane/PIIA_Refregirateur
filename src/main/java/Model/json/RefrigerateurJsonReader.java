@@ -11,53 +11,46 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class CourseJsonReader {
+public class RefrigerateurJsonReader {
 
-    /**
-     * Lit le fichier json et renvoie une liste de course
-     * @return la liste des courses
-     */
-    public static ArrayList<String> getListeCourse(){
-        ArrayList<String> ingredients = new ArrayList<>();
-        try {
+
+    public static ArrayList<Aliment> getAliment(){
+        ArrayList<Aliment> aliments = new ArrayList<>();
+        try{
             //Lecture du fichier JSON existant
-            File file = new File("src/main/resources/json/courses.json");
+            File file = new File("src/main/resources/json/refrigerateur.json");
             ObjectMapper objectMapper = new ObjectMapper();
 
             //sérialisation
-            ArrayList<Aliment> aliments  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
-
-
-            for (Aliment aliment : aliments) {
-                ingredients.add(aliment.getNom() + " " + aliment.getUnite());
-
-            }
+            aliments  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
 
         }catch (IOException e) {
             e.printStackTrace();
         }
-        return ingredients;
+        return aliments;
     }
 
     /**
      * Ajoute un aliment au fichier json
-     * @param aliment à ajouter
+     * @param aliment
      */
-    public static void addCourse(Aliment aliment){
+    public static void addAliment(Aliment aliment){
         try {
             //Lecture du fichier JSON existant
-            File file = new File("src/main/resources/json/courses.json");
+            File file = new File("src/main/resources/json/refrigerateur.json");
             ObjectMapper objectMapper = new ObjectMapper();
 
             //sérialisation
             ArrayList<Aliment> aliments  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
 
-            //ajoute une recette
+            //ajoute un aliment
             aliments.add(aliment);
+            System.out.println(aliment.getNom() + "reader");
+            System.out.println();
 
             //mise à jour du fichier json
             JsonGenerator jsonGenerator = objectMapper.getFactory().createGenerator(
-                    new File("src/main/resources/json/courses.json"), JsonEncoding.UTF8);
+                    new File("src/main/resources/json/refrigerateur.json"), JsonEncoding.UTF8);
             jsonGenerator.setPrettyPrinter(new DefaultPrettyPrinter());
             objectMapper.writeValue(jsonGenerator, aliments);
 
@@ -65,5 +58,6 @@ public class CourseJsonReader {
             e.printStackTrace();
         }
     }
+
 
 }

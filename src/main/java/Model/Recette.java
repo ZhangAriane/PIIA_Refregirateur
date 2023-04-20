@@ -1,6 +1,5 @@
 package Model;
 
-import Model.Ingredient;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;

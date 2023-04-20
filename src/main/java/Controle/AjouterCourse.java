@@ -1,5 +1,6 @@
 package Controle;
 
+import Model.Aliment;
 import Model.json.CourseJsonReader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -24,7 +25,7 @@ public class AjouterCourse extends ChangePage {
         int unite = Integer.parseInt((uniteAjouterAliment.getText()));
 
 
-        CourseJsonReader.addCourse(nom, type, taille, unite);
+        CourseJsonReader.addCourse(new Aliment(nom, type, taille, unite));
         changePage(FXML_FILE_PATH,validerAjouterAliment);
     }
 

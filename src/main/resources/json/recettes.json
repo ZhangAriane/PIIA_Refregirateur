@@ -1,17 +1,4 @@
 [ {
-  "nomRecette" : "Gratin de pates au poulet",
-  "ingredients" : [ {
-    "nom" : "Oignon",
-    "type" : "Fruits et légumes",
-    "taille" : 1,
-    "unite" : 1
-  }, {
-    "nom" : "Pate",
-    "type" : "Pates",
-    "taille" : 1,
-    "unite" : 1
-  } ]
-}, {
   "nomRecette" : "Salade César",
   "ingredients" : [ {
     "nom" : "Salade",
@@ -24,21 +11,20 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},
-  {
-    "nomRecette" : "Tarte aux poireaux et aux lardons",
-    "ingredients" : [ {
-      "nom" : "Poireaux",
-      "type" : "Fruits et légumes",
-      "taille" : 1,
-      "unite" : 1
-    }, {
-      "nom" : "Lardon",
-      "type" : "Viandes",
-      "taille" : 1,
-      "unite" : 1
-    } ]
+}, {
+  "nomRecette" : "Tarte aux poireaux et aux lardons",
+  "ingredients" : [ {
+    "nom" : "Poireaux",
+    "type" : "Fruits et légumes",
+    "taille" : 1,
+    "unite" : 1
   }, {
+    "nom" : "Lardon",
+    "type" : "Viandes",
+    "taille" : 1,
+    "unite" : 1
+  } ]
+}, {
   "nomRecette" : "Rouleaux de printemps",
   "ingredients" : [ {
     "nom" : "Blanc de poulet",
@@ -55,8 +41,8 @@
     "type" : "Pates",
     "taille" : 1,
     "unite" : 1
-  }  ]
-},{
+  } ]
+}, {
   "nomRecette" : "Omelette nature",
   "ingredients" : [ {
     "nom" : "Oeuf",
@@ -82,7 +68,7 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},{
+}, {
   "nomRecette" : "Tarte à l'oignon",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -112,8 +98,8 @@
     "type" : "Viandes",
     "taille" : 1,
     "unite" : 1
-  }  ]
-},{
+  } ]
+}, {
   "nomRecette" : "Samoussa au boeuf",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -139,7 +125,7 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},{
+}, {
   "nomRecette" : "Riz frit au saucisse",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -165,7 +151,7 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},{
+}, {
   "nomRecette" : "Fritte",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -191,7 +177,7 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},{
+}, {
   "nomRecette" : "Hamburger",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -217,7 +203,7 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},{
+}, {
   "nomRecette" : "Tacos maison",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -243,7 +229,7 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},{
+}, {
   "nomRecette" : "Galette",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -269,7 +255,7 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},{
+}, {
   "nomRecette" : "Boeuf sauté",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -295,7 +281,7 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},{
+}, {
   "nomRecette" : "Fondue savoyarde",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -321,7 +307,7 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},{
+}, {
   "nomRecette" : "Côtes d'agneau",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -347,7 +333,7 @@
     "taille" : 1,
     "unite" : 1
   } ]
-},{
+}, {
   "nomRecette" : "Andouille de porc",
   "ingredients" : [ {
     "nom" : "Oignon",
@@ -373,5 +359,4 @@
     "taille" : 1,
     "unite" : 1
   } ]
-}
-]
+} ]

@@ -82,7 +82,5 @@ public class ListeRecettes extends ChangePage implements Initializable  {
             recetteSelected = listeRecette.getItems().get(selectedID);
             changePage(FXML_FILE_PATH4,boutonAfficher);
         }
-
-
     }
 }

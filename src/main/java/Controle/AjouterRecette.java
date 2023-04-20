@@ -1,6 +1,7 @@
 package Controle;
 
 import Model.Aliment;
+import Model.Recette;
 import Model.json.RecetteJsonReader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -29,7 +30,7 @@ public class AjouterRecette extends ChangePage implements Initializable {
         String nom = nomAjouterRecette.getText();
 
         //ajoute au fichier json
-        RecetteJsonReader.addRecette(nom, ingredients);
+        RecetteJsonReader.addRecette(new Recette(nom, ingredients));
 
         //nettoie la liste d'ingrédient
         ingredients.clear();
