@@ -1,5 +1,6 @@
 package Model.json;
 
+import Model.Aliment;
 import Model.Ingredient;
 import Model.Recette;
 import com.fasterxml.jackson.core.JsonEncoding;
@@ -102,7 +103,7 @@ public class RecetteJsonReader {
      * @param nom nom de la recette
      * @param ingredients les ingrédients de la recette
      */
-    public static void addRecette(String nom, ArrayList<Ingredient> ingredients){
+    public static void addRecette(String nom, ArrayList<Aliment> ingredients){
         try {
             //Lecture du fichier JSON existant
             File file = new File("src/main/resources/json/recettes.json");

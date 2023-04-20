@@ -16,7 +16,7 @@
 
    <children>
       <Separator prefWidth="200.0" />
-      <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="3.0">
+      <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="2.0">
          <effect>
             <ColorAdjust />
          </effect>

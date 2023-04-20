@@ -1,7 +1,6 @@
 package Model.json;
 
 import Model.Aliment;
-import Model.Recette;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.type.TypeReference;

@@ -1,18 +1,19 @@
 package Controle;
 
-import Model.Ingredient;
+import Model.Aliment;
 import Model.json.RecetteJsonReader;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
-public class AjouterRecette extends ChangePage{
-    private static final String FXML_FILE_PATH = "/FXML/Liste_de_Recettes.fxml";
+public class AjouterRecette extends ChangePage implements Initializable {
+    private static final String FXML_FILE_PATH1 = "/FXML/Liste_de_Recettes.fxml";
+    private static final String FXML_FILE_PATH2 = "/FXML/Ajoutez_un_ingredient.fxml";
 
     public TextField nomAjouterRecette;
-    public TextField ingredientAjouterRecette;
-    public TextField quantiteAjouterRecette;
-    public TextField uniteAjouterRecette;
 
     public Button validerAjouterRecette;
     public Button revenirArriereAjouterRecette;
@@ -20,7 +21,9 @@ public class AjouterRecette extends ChangePage{
 
     public ListView<String> listeIngredients;
 
-    private final ArrayList<Ingredient> ingredients = new ArrayList<>();
+    private static final ArrayList<Aliment> ingredients = new ArrayList<>();
+
+    public static ArrayList<Aliment> getIngredients(){return ingredients;}
 
     public void validerAjouterRecette() {
         String nom = nomAjouterRecette.getText();
@@ -31,25 +34,29 @@ public class AjouterRecette extends ChangePage{
         //nettoie la liste d'ingrédient
         ingredients.clear();
 
-        changePage(FXML_FILE_PATH,validerAjouterRecette);
+        changePage(FXML_FILE_PATH1,validerAjouterRecette);
 
     }
 
-
-    public void ajouterIngredient() {
-        String ingredient = ingredientAjouterRecette.getText();
-        String quantite = quantiteAjouterRecette.getText();
-        String unite = uniteAjouterRecette.getText();
-
-        //ajoute à la liste
-        listeIngredients.getItems().add(ingredient + " " + quantite + unite);
-
-        ingredients.add(new Ingredient(ingredient,Integer.parseInt(quantite),unite));
-
-    }
 
     public void allerPageListeRecette() {
-        changePage(FXML_FILE_PATH,revenirArriereAjouterRecette);
+        //nettoie la liste d'ingrédient
+        ingredients.clear();
 
+        changePage(FXML_FILE_PATH1,revenirArriereAjouterRecette);
+
+    }
+
+    public void allerPageAjouterIngredient() {
+        changePage(FXML_FILE_PATH2,validerAjouterRecette);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        for (Aliment aliment : ingredients) {
+            String ingredient = aliment.getNom();
+            int unite = aliment.getUnite();
+            listeIngredients.getItems().add(ingredient + " " + unite);
+        }
     }
 }

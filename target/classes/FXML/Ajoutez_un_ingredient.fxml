@@ -11,7 +11,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="ajouterAliment" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.AjouterAliment">
+<Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.AjouterIngredient">
    <children>
       <Separator prefWidth="200.0" />
       <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="2.0">
@@ -33,12 +33,12 @@
          <font>
             <Font name="System Font" size="18.0" />
          </font></TextField>
-      <Button fx:id="validerAjouterAliment" layoutX="145.0" layoutY="491.0" mnemonicParsing="false" onAction="#validerAjouterAliment" style="-fx-background-color: lightblue;" text="Valider" textFill="#2985e1">
+      <Button fx:id="validerAjouterIngredient" layoutX="145.0" layoutY="491.0" mnemonicParsing="false" onAction="#validerAjouterIngredient" style="-fx-background-color: lightblue;" text="Valider" textFill="#2985e1">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button fx:id="revenirArriereAjouterAliment" ellipsisString="&lt;" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#allerPageRefrigerateur" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
+      <Button fx:id="revenirArriereAjouterAliment" ellipsisString="&lt;" layoutX="14.0" layoutY="8.0" mnemonicParsing="false" onAction="#allerPageAjouterRecette" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">
          <font>
             <Font size="24.0" />
          </font>

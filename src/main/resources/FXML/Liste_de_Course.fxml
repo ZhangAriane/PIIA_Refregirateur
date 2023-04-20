@@ -14,7 +14,7 @@
 <Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ListeCourse">
    <children>
       <Separator prefWidth="200.0" />
-      <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="3.0">
+      <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="2.0">
          <effect>
             <ColorAdjust />
          </effect>
@@ -24,14 +24,14 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <Button fx:id="acheter" layoutX="144.0" layoutY="518.0" mnemonicParsing="false" onAction="#acheter" style="-fx-background-color: lightblue;" text="Acheter" textFill="#2985e1">
+      <Button fx:id="acheter" layoutX="143.0" layoutY="517.0" mnemonicParsing="false" onAction="#acheter" style="-fx-background-color: lightblue;" text="Acheter" textFill="#2985e1">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button fx:id="ajouterCourse" layoutX="344.0" layoutY="17.0" mnemonicParsing="false" onAction="#ajouterCourse" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+" textFill="#1b1a1a">
+      <Button fx:id="ajouterCourse" ellipsisString="" layoutX="344.0" layoutY="5.0" mnemonicParsing="false" onAction="#ajouterCourse" style="-fx-background-color: yellow; -fx-background-radius: 50;" text="+" textFill="#47804d">
          <font>
-            <Font name="System Bold" size="18.0" />
+            <Font name="System Bold" size="24.0" />
          </font>
       </Button>
       <Button fx:id="revenirArriereListeCourse" ellipsisString="&lt;" layoutX="18.0" layoutY="5.0" mnemonicParsing="false" onAction="#allerPageAccueil" prefHeight="45.0" prefWidth="26.0" style="-fx-background-color: lightblue; -fx-background-radius: 50;" text="&lt;" textFill="#47804d">

@@ -15,7 +15,7 @@
 <Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.Configuration">
    <children>
       <Separator prefWidth="200.0" />
-      <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="3.0">
+      <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="2.0">
          <effect>
             <ColorAdjust />
          </effect>
@@ -40,7 +40,7 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <Line disable="true" endX="150.0" layoutX="200.0" layoutY="136.0" startX="-150.0" strokeWidth="3.0">
+      <Line disable="true" endX="150.0" layoutX="200.0" layoutY="136.0" startX="-150.0" strokeWidth="2.0">
          <effect>
             <ColorAdjust />
          </effect>
@@ -65,7 +65,7 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <Line disable="true" endX="150.0" layoutX="200.0" layoutY="416.0" startX="-150.0" strokeWidth="3.0">
+      <Line disable="true" endX="150.0" layoutX="200.0" layoutY="416.0" startX="-150.0" strokeWidth="2.0">
          <effect>
             <ColorAdjust />
          </effect>

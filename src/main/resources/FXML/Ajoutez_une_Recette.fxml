@@ -15,7 +15,7 @@
 
    <children>
       <Separator prefWidth="200.0" />
-      <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="3.0">
+      <Line disable="true" endX="200.0" layoutX="200.0" layoutY="62.0" startX="-200.0" strokeWidth="2.0">
          <effect>
             <ColorAdjust />
          </effect>
@@ -25,22 +25,17 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <Text fill="#3e0b8a" fontSmoothingType="LCD" layoutX="49.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" wrappingWidth="137.0">
+      <Text fill="#3e0b8a" fontSmoothingType="LCD" layoutX="73.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom" wrappingWidth="137.0">
          <font>
             <Font size="26.0" />
          </font>
       </Text>
-      <Text fill="#3e0b8a" fontSmoothingType="LCD" layoutX="163.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantité" wrappingWidth="100.0">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Text>
-      <TextField fx:id="nomAjouterRecette" layoutX="49.0" layoutY="105.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow;">
+      <TextField fx:id="nomAjouterRecette" layoutX="64.0" layoutY="107.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="35.0" prefWidth="274.0" promptText="Nom de Recette" style="-fx-background-color: lightyellow;">
          <font>
             <Font name="System Font" size="18.0" />
          </font>
       </TextField>
-      <Button fx:id="validerAjouterRecette" layoutX="149.0" layoutY="543.0" mnemonicParsing="false" onAction="#validerAjouterRecette" style="-fx-background-color: lightgreen; -fx-background-radius: 50;" text="valider" textFill="#282828">
+      <Button fx:id="validerAjouterRecette" layoutX="149.0" layoutY="543.0" mnemonicParsing="false" onAction="#validerAjouterRecette" style="-fx-background-color: lightgreen;" text="valider" textFill="#282828">
          <font>
             <Font size="24.0" />
          </font>
@@ -52,20 +47,7 @@
             <Font size="24.0" />
          </font>
       </Button>
-      <Text fill="#3e0b8a" fontSmoothingType="LCD" layoutX="10.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingredients" wrappingWidth="147.0">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Text>
-      <TextField fx:id="ingredientAjouterRecette" layoutX="7.0" layoutY="179.0" prefHeight="31.0" prefWidth="153.0" promptText="Ingrédient" />
-      <TextField fx:id="quantiteAjouterRecette" layoutX="174.0" layoutY="179.0" prefHeight="31.0" prefWidth="78.0" promptText="Quantité" />
-      <TextField fx:id="uniteAjouterRecette" layoutX="263.0" layoutY="179.0" prefHeight="31.0" prefWidth="61.0" promptText="Unité" />
-      <Text fill="#3e0b8a" layoutX="271.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unité">
-         <font>
-            <Font size="26.0" />
-         </font>
-      </Text>
-      <Button fx:id="ajouterIngredient" layoutX="342.0" layoutY="179.0" mnemonicParsing="false" onMouseClicked="#ajouterIngredient" style="-fx-background-radius: 50; -fx-background-color: yellow;" text="ok" />
+      <Button fx:id="ajouterIngredient" layoutX="99.0" layoutY="167.0" mnemonicParsing="false" onAction="#allerPageAjouterIngredient" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: yellow;" text="Ajouter un ingrédient" />
       <ListView fx:id="listeIngredients" layoutX="-1.0" layoutY="218.0" prefHeight="323.0" prefWidth="400.0" />
    </children>
 </AnchorPane>
