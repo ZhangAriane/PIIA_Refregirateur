@@ -95,7 +95,6 @@ public class RefrigerateurJsonReader {
      * @return true si l'aliment existe, sinon false
      */
     public static Boolean exist(String ingredient){
-        Boolean res = false;
         try {
             //Lecture du fichier JSON existant
             File file = new File("src/main/resources/json/refrigerateur.json");
@@ -113,7 +112,7 @@ public class RefrigerateurJsonReader {
         }catch (IOException e) {
             e.printStackTrace();
         }
-        return res;
+        return false;
     }
 
 

@@ -53,6 +53,9 @@ public class DetailleRecette extends ChangePage implements Initializable {
         metCouleur();
     }
 
+    /**
+     * Affiche la liste d'ingrédient
+     */
     private void afficheRecette(){
         int index = ListeRecettes.recetteSelected;
 
@@ -86,9 +89,9 @@ public class DetailleRecette extends ChangePage implements Initializable {
                         System.out.println(getText());
                         // Change la couleur de fond en fonction du stock du réfrigérateur
                         if(RefrigerateurJsonReader.exist(getText()))
-                            setBackground(new Background(new BackgroundFill(Color.GREEN, null, null)));
+                            setBackground(new Background(new BackgroundFill(Color.rgb(162, 217, 0), null, null)));
                         else
-                            setBackground(new Background(new BackgroundFill(Color.RED, null, null)));
+                            setBackground(new Background(new BackgroundFill(Color.rgb(233, 109, 78), null, null)));
                     }
                 }
             });
