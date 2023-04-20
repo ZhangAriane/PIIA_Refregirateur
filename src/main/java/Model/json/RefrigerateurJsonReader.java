@@ -1,7 +1,6 @@
 package Model.json;
 
 import Model.Aliment;
-import Model.Recette;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -94,33 +93,6 @@ public class RefrigerateurJsonReader {
         }
     }
 
-    /**
-     * Lit si le fichier json contient tous les aliments de la liste
-     * @param ingredients liste d'aliment
-     * @return true si tous les aliments existe, sinon false
-     */
-    public static Boolean exist(ArrayList<Aliment> ingredients){
-        Boolean res = true;
-        try {
-            //Lecture du fichier JSON existant
-            File file = new File("src/main/resources/json/refrigerateur.json");
-            ObjectMapper objectMapper = new ObjectMapper();
-
-            //sérialisation
-            ArrayList<Aliment> aliments  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
-
-            for (Aliment ingredient : ingredients) {
-                if (!aliments.contains(ingredient)) {
-                    res = false;
-                    break;
-                }
-            }
-
-        }catch (IOException e) {
-            e.printStackTrace();
-        }
-        return res;
-    }
 
     /**
      * Lit si le fichier json contient un aliment
@@ -137,9 +109,9 @@ public class RefrigerateurJsonReader {
             ArrayList<Aliment> aliments  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
 
             for (Aliment aliment : aliments) {
-                if (aliment.getNom().equals(ingredient))
+                if (aliment.getNom().equals(ingredient)){
                     return true;
-                break;
+                }
             }
 
         }catch (IOException e) {
