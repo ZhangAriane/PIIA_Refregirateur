@@ -1,6 +1,7 @@
 package Model.json;
 
 
+import Model.Aliment;
 import Model.Recette;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -46,7 +47,7 @@ public class RecetteJsonReader {
      * @param index de la recette
      * @return recette
      */
-    public static Recette getRecette(int  index){
+    public static Recette getRecette(int index){
         try {
             //Lecture du fichier JSON existant
             File file = new File("src/main/resources/json/recettes.json");
@@ -57,6 +58,28 @@ public class RecetteJsonReader {
 
 
             return recettes.get(index);
+
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+     * Cherche les ingrédients de la recette correspondante
+     * @param index de la recette
+     * @return ingrédients
+     */
+    public static ArrayList<Aliment> getIngredients(int index){
+        try {
+            //Lecture du fichier JSON existant
+            File file = new File("src/main/resources/json/recettes.json");
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            //sérialisation
+            ArrayList<Recette> recettes  = objectMapper.readValue(file, new TypeReference<ArrayList<Recette>>() {});
+
+            return recettes.get(index).getIngredients();
 
         }catch (IOException e) {
             e.printStackTrace();

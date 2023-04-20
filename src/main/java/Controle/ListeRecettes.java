@@ -1,11 +1,21 @@
 package Controle;
 
+import Model.Aliment;
 import Model.json.RecetteJsonReader;
+import Model.json.RefrigerateurJsonReader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.LinearGradient;
+
 import java.net.URL;
+import java.sql.Ref;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -83,4 +93,50 @@ public class ListeRecettes extends ChangePage implements Initializable  {
             changePage(FXML_FILE_PATH4,boutonAfficher);
         }
     }
+
+    /**
+     * Affiche les recettes ayant les ingrédients présent dans le réfrigérateur en vert
+     * sinon en rouge
+     */
+    public void afficheCouleur() {
+        listeRecette.setCellFactory(listeIngredients -> new ListCell<String>(){
+            @Override
+            protected void updateItem(String item, boolean empty){
+                super.updateItem(item, empty);
+                setText(item);
+                if (!empty) {
+                    ArrayList<Aliment> aliments = RefrigerateurJsonReader.getAliment();
+                    ArrayList<Aliment> ingredients =  RecetteJsonReader.getIngredients(getIndex());
+                    if (contient(ingredients,aliments)) {
+                        setBackground(new Background(new BackgroundFill(Color.rgb(162, 217, 0), null, null)));
+                    } else {
+                        setBackground(new Background(new BackgroundFill(Color.rgb(233, 109, 78), null, null)));
+                    }
+                }
+            }
+        });
+    }
+
+    /**
+     * Regarde si tous les ingrédients sont dans le réfrigérateur ou non
+     * @param ingredients de la recette
+     * @param aliments dans le réfrigérateur
+     * @return true si tous les ingrédients sont dans le réfrigérateur
+     * sinon false
+     */
+    private Boolean contient(ArrayList<Aliment> ingredients, ArrayList<Aliment> aliments){
+        int temp =0;
+        for(int i=0; i<ingredients.size();i++) {
+            Boolean retirer = false;
+            for (int j = 0; j < aliments.size(); j++) {
+                if (ingredients.get(i).getNom().equals(aliments.get(j).getNom()) && !retirer) {
+                    retirer = true;
+                    aliments.remove(aliments.get(i));
+                    temp += 1;
+                }
+            }
+        }
+        return (temp==ingredients.size());
+    }
+
 }

@@ -43,4 +43,24 @@
   "type" : "Viandes",
   "taille" : 1,
   "unite" : 1
+}, {
+  "nom" : "Pomme",
+  "type" : "Fruits et légumes",
+  "taille" : 1,
+  "unite" : 1
+}, {
+  "nom" : "Banane",
+  "type" : "Fruits et légumes",
+  "taille" : 1,
+  "unite" : 1
+}, {
+  "nom" : "Oignon",
+  "type" : "Fruits et légumes",
+  "taille" : 1,
+  "unite" : 1
+}, {
+  "nom" : "Oignon",
+  "type" : "Fruits et légumes",
+  "taille" : 1,
+  "unite" : 1
 } ]

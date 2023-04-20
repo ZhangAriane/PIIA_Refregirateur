@@ -8,8 +8,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TableRow;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
@@ -35,7 +33,7 @@ public class DetailleRecette extends ChangePage implements Initializable {
 
     public void cuisinier() {
         miseAJourFrigo();
-        changePage(FXML_FILE_PATH1,cuisinier);
+        changePage(FXML_FILE_PATH2,cuisinier);
     }
 
     public void diminierPersonne() {}
