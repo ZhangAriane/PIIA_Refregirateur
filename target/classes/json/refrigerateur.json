@@ -4,8 +4,13 @@
   "taille" : 1,
   "unite" : 1
 }, {
-  "nom" : "Oignon",
-  "type" : "Fruits et légumes",
+  "nom" : "Eau",
+  "type" : "Bouteilles",
+  "taille" : 1,
+  "unite" : 1
+}, {
+  "nom" : "Eau",
+  "type" : "Bouteilles",
   "taille" : 1,
   "unite" : 1
 }, {
@@ -14,13 +19,28 @@
   "taille" : 1,
   "unite" : 1
 }, {
-  "nom" : "Oignon",
-  "type" : "Fruits et légumes",
+  "nom" : "Boeuf",
+  "type" : "Viandes",
   "taille" : 1,
   "unite" : 1
 }, {
-  "nom" : "Oignon",
-  "type" : "Fruits et légumes",
+  "nom" : "Boeuf",
+  "type" : "Viandes",
+  "taille" : 1,
+  "unite" : 1
+}, {
+  "nom" : "Boeuf",
+  "type" : "Viandes",
+  "taille" : 1,
+  "unite" : 1
+}, {
+  "nom" : "Pate",
+  "type" : "Pates",
+  "taille" : 1,
+  "unite" : 1
+}, {
+  "nom" : "Oeuf",
+  "type" : "Viandes",
   "taille" : 1,
   "unite" : 1
 } ]

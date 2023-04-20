@@ -42,30 +42,42 @@ public class Refrigerateur extends ChangePage implements Initializable {
      */
     private void afficheAliment(){
         ArrayList<Aliment> aliments =  RefrigerateurJsonReader.getAliment();
+        ArrayList<Aliment> fruitLegume = new ArrayList<>();
+        ArrayList<Aliment> viandes = new ArrayList<>();
+        ArrayList<Aliment> bouteilles = new ArrayList<>();
+        ArrayList<Aliment>pates = new ArrayList<>();
 
-        for(int i=0;i<aliments.size();i++){
+        for(int i=0; i<aliments.size();i++){
+            switch (aliments.get(i).getType()){
+                case "Fruits et légumes":
+                    fruitLegume.add(aliments.get(i));
+                    break;
+                case "Viandes":
+                    viandes.add(aliments.get(i));
+                    break;
+                case "Bouteilles":
+                    bouteilles.add(aliments.get(i));
+                    break;
+                case "Pates":
+                    pates.add(aliments.get(i));
+                    break;
+            }
+        }
+        ajouterAliment(fruitLegume,Fruits_et_legumes,4);
+        ajouterAliment(viandes,Viandes,3);
+        ajouterAliment(bouteilles,Bouteilles,2);
+        ajouterAliment(pates,Pates,3);
+    }
+
+    private void ajouterAliment(ArrayList<Aliment>aliments, GridPane gridPane, int n){
+        for(int i=0; i<aliments.size();i++){
             TextField textField = new TextField();
             textField.setText(aliments.get(i).getNom());
             textField.setFont(Font.font(16));
             textField.setPrefSize(30, 30);
             textField.setAlignment(Pos.CENTER);
-
-            switch (aliments.get(i).getType()) {
-                case "Fruits et légumes":
-                    Fruits_et_legumes.add(textField, i % 4, i / 4);
-                    break;
-                case "Viandes":
-                    Viandes.add(textField, i % 3, i / 4);
-                    break;
-                case "Bouteilles":
-                    Bouteilles.add(textField, i % 2, i / 5);
-                    break;
-                case "Pates":
-                    Pates.add(textField, i % 3, i / 3);
-                    break;
-            }
+            gridPane.add(textField, i % n, i / n);
         }
-
     }
 
 

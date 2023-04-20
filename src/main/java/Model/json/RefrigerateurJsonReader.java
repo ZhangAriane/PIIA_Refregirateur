@@ -35,6 +35,30 @@ public class RefrigerateurJsonReader {
     }
 
     /**
+     * Lit et récupère la liste des aliments du fichier json
+     * @return la liste des aliments
+     */
+    public static ArrayList<String> getAlimentNom(){
+        ArrayList<String> aliments = new ArrayList<>();
+        try{
+            //Lecture du fichier JSON existant
+            File file = new File("src/main/resources/json/refrigerateur.json");
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            //sérialisation
+            ArrayList<Aliment> liste  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
+
+            for(int i=0; i<liste.size();i++){
+                aliments.add(liste.get(i).getNom());
+            }
+
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return aliments;
+    }
+
+    /**
      * Ajoute un aliment au fichier json
      * @param aliment à ajouter
      */
@@ -74,11 +98,16 @@ public class RefrigerateurJsonReader {
             //sérialisation
             ArrayList<Aliment> aliments  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
 
+
             //retire la recette
             for(int i=0; i<ingredients.size();i++){
+                Boolean retirer = false;
                 for(int j=0; j<aliments.size();j++){
-                    if(aliments.get(j).getNom().equals(ingredients.get(i)))
-                        aliments.remove(i);
+                    if(aliments.get(j).getNom().equals(ingredients.get(i)) && !retirer){
+                        aliments.remove(j);
+                        retirer = true;
+                    }
+
                 }
             }
 
@@ -92,6 +121,8 @@ public class RefrigerateurJsonReader {
             e.printStackTrace();
         }
     }
+
+
 
 
     /**
@@ -118,6 +149,32 @@ public class RefrigerateurJsonReader {
             e.printStackTrace();
         }
         return false;
+    }
+
+    /**
+     * Lit si le fichier json contient un aliment
+     * @param ingredient aliment
+     * @return true si l'aliment existe, sinon false
+     */
+    public static Boolean exist(ArrayList<String> ingredient){
+        try {
+            //Lecture du fichier JSON existant
+            File file = new File("src/main/resources/json/refrigerateur.json");
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            //sérialisation
+            ArrayList<Aliment> aliments  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
+
+            for (Aliment aliment : aliments) {
+                if (!aliment.getNom().equals(ingredient)){
+                    return false;
+                }
+            }
+
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return true;
     }
 
 

@@ -33,7 +33,7 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <Button fx:id="cuisinier" layoutX="142.0" layoutY="517.0" mnemonicParsing="false" onAction="#cuisinier" style="-fx-background-color: lightgreen; -fx-border-color: Blue;" text="Cuisiner" textFill="#2985e1">
+      <Button fx:id="cuisinier" layoutX="134.0" layoutY="512.0" mnemonicParsing="false" onAction="#cuisinier" style="-fx-background-color: lightgreen; -fx-border-color: Blue;" text="Cuisiner" textFill="#2985e1">
          <font>
             <Font size="24.0" />
          </font>
@@ -45,7 +45,7 @@
       </Button>
       <TextFlow layoutX="6.0" layoutY="143.0" prefHeight="362.0" prefWidth="390.0">
          <children>
-            <ListView fx:id="listeIngredients" prefHeight="368.0" prefWidth="389.0" />
+            <ListView fx:id="listeIngredients" onMouseClicked="#afficherCouleur" prefHeight="368.0" prefWidth="389.0" />
          </children></TextFlow>
       <Button layoutX="28.0" layoutY="70.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="168.0" style="-fx-background-color: lightgreen; -fx-background-radius: 30px;" text="1 personne" textFill="#2985e1">
          <font>

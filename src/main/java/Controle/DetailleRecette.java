@@ -8,6 +8,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableRow;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
@@ -47,7 +49,7 @@ public class DetailleRecette extends ChangePage implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         afficheRecette();
-        metCouleur();
+        //metCouleurs();
     }
 
     /**
@@ -75,8 +77,10 @@ public class DetailleRecette extends ChangePage implements Initializable {
      * Change la couleur de la ligne de la liste
      * si l'ingrédient est dans le réfrigérateur, affiche en vert
      * sinon en rouge
-     */
+     *//*
     private void metCouleur(){
+        ArrayList<String> aliments = RefrigerateurJsonReader.getAlimentNom();
+
         listeIngredients.setCellFactory(listeIngredients -> new ListCell<String>(){
              @Override
              protected void updateItem(String item, boolean empty){
@@ -93,14 +97,48 @@ public class DetailleRecette extends ChangePage implements Initializable {
         });
     }
 
+*/
 
+    /**
+     * Mettre à jour le réfrigérateur après avoir cuisinier
+     */
     private void miseAJourFrigo(){
         ArrayList<String> aliments = new ArrayList<>();
         for (String aliment : listeIngredients.getItems()) {
             aliments.add(aliment);
         }
-        RefrigerateurJsonReader.removeAliment(aliments);
 
+        RefrigerateurJsonReader.removeAliment(aliments);
     }
 
+
+
+    /**
+     * Change la couleur de la ligne de la liste
+     * si l'ingrédient est dans le réfrigérateur, affiche en vert
+     * sinon en rouge
+     */
+    public void afficherCouleur() {
+        ArrayList<String> aliments = RefrigerateurJsonReader.getAlimentNom();
+
+        listeIngredients.setCellFactory(listeIngredients -> new ListCell<String>(){
+
+            @Override
+            protected void updateItem(String item, boolean empty){
+                super.updateItem(item, empty);
+                setText(item);
+                if (!empty) {
+                    if (aliments.contains(getText())) {
+                        setBackground(new Background(new BackgroundFill(Color.rgb(162, 217, 0), null, null)));
+                        aliments.remove(getText());
+                    } else {
+                        setBackground(new Background(new BackgroundFill(Color.rgb(233, 109, 78), null, null)));
+
+                    }
+
+                }
+
+            }
+        });
+    }
 }
