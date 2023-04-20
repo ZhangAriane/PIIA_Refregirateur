@@ -25,7 +25,7 @@ public class ListeRecettes extends ChangePage implements Initializable  {
     public Button boutonSupprimer;
 
 
-    public static String recetteSelected;
+    public static int recetteSelected;
 
     public void allerPageAjouterRecette() {
         changePage(FXML_FILE_PATH1,ajouterRecette);
@@ -53,7 +53,7 @@ public class ListeRecettes extends ChangePage implements Initializable  {
         String nomRecette = listeRecette.getItems().get(selectedID);
 
         //Retire du fichier json
-        RecetteJsonReader.removeRecette(nomRecette);
+        RecetteJsonReader.removeRecette(selectedID);
 
         //Retire de liste de l'interface
         listeRecette.getItems().remove(selectedID);
@@ -79,7 +79,7 @@ public class ListeRecettes extends ChangePage implements Initializable  {
         int selectedID = listeRecette.getSelectionModel().getSelectedIndex();
 
         if(selectedID >= 0){
-            recetteSelected = listeRecette.getItems().get(selectedID);
+            recetteSelected = selectedID;
             changePage(FXML_FILE_PATH4,boutonAfficher);
         }
     }

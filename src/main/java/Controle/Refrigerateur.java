@@ -23,7 +23,7 @@ public class Refrigerateur extends ChangePage implements Initializable {
 
 
     public GridPane Bouteilles;
-    public GridPane Fruits_et_légumes;
+    public GridPane Fruits_et_legumes;
     public GridPane Viandes;
     public GridPane Pates;
 
@@ -52,14 +52,13 @@ public class Refrigerateur extends ChangePage implements Initializable {
 
             switch (aliments.get(i).getType()) {
                 case "Fruits et légumes":
-                    Fruits_et_légumes.add(textField, i % 4, i / 4);
+                    Fruits_et_legumes.add(textField, i % 4, i / 4);
                     break;
                 case "Viandes":
                     Viandes.add(textField, i % 3, i / 4);
                     break;
                 case "Bouteilles":
                     Bouteilles.add(textField, i % 2, i / 5);
-
                     break;
                 case "Pates":
                     Pates.add(textField, i % 3, i / 3);

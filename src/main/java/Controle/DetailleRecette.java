@@ -49,12 +49,12 @@ public class DetailleRecette extends ChangePage implements Initializable {
     }
 
     private void afficheRecette(){
-        String nomRecette = ListeRecettes.recetteSelected;
+        int index = ListeRecettes.recetteSelected;
 
-        Recette recette = RecetteJsonReader.getRecette(nomRecette);
+        Recette recette = RecetteJsonReader.getRecette(index);
         ArrayList<Aliment> ingredients = recette.getIngredients();
 
-        this.nomRecette.setText(nomRecette);
+        this.nomRecette.setText(recette.getNomRecette());
 
         for (Aliment ingredient : ingredients) {
             String nom = ingredient.getNom();

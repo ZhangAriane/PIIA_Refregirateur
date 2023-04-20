@@ -43,10 +43,10 @@ public class RecetteJsonReader {
 
     /**
      * Cherche la recette correspondante au nom de recette
-     * @param nomRecette nom de la recette
+     * @param index de la recette
      * @return recette
      */
-    public static Recette getRecette(String nomRecette){
+    public static Recette getRecette(int  index){
         try {
             //Lecture du fichier JSON existant
             File file = new File("src/main/resources/json/recettes.json");
@@ -56,10 +56,7 @@ public class RecetteJsonReader {
             ArrayList<Recette> recettes  = objectMapper.readValue(file, new TypeReference<ArrayList<Recette>>() {});
 
 
-            for (Recette recette : recettes) {
-                if (recette.getNomRecette().equals(nomRecette))
-                    return recette;
-            }
+            return recettes.get(index);
 
         }catch (IOException e) {
             e.printStackTrace();
@@ -69,9 +66,9 @@ public class RecetteJsonReader {
 
     /**
      * Supprime une recette du fichier json
-     * @param nomRecette le nom de la recette a supprimé
+     * @param index l'index de la recette a supprimé
      */
-    public static void removeRecette(String nomRecette){
+    public static void removeRecette(int index){
         try {
             //Lecture du fichier JSON existant
             File file = new File("src/main/resources/json/recettes.json");
@@ -81,11 +78,8 @@ public class RecetteJsonReader {
             ArrayList<Recette> recettes  = objectMapper.readValue(file, new TypeReference<ArrayList<Recette>>() {});
 
             //retire la recette
-            for(int i=0; i<recettes.size();i++){
-                if(recettes.get(i).getNomRecette().equals(nomRecette)){
-                    recettes.remove(recettes.get(i));
-                }
-            }
+            recettes.remove(index);
+
             //mise à jour du fichier json
             JsonGenerator jsonGenerator = objectMapper.getFactory().createGenerator(
                     new File("src/main/resources/json/recettes.json"), JsonEncoding.UTF8);

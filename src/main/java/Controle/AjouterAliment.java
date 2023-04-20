@@ -4,7 +4,6 @@ import Model.json.RefrigerateurJsonReader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import Model.Aliment;
-import java.io.IOException;
 
 
 public class AjouterAliment extends ChangePage {
@@ -19,9 +18,7 @@ public class AjouterAliment extends ChangePage {
     public TextField uniteAjouterAliment;
 
 
-
-
-    public void validerAjouterAliment() throws IOException {
+    public void validerAjouterAliment() {
         ajouterAliment();
         changePage(FXML_FILE_PATH,validerAjouterAliment);
     }

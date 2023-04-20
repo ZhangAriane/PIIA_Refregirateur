@@ -1,7 +1,9 @@
 package Controle;
 
 
+import Model.Aliment;
 import Model.json.CourseJsonReader;
+import Model.json.RefrigerateurJsonReader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -20,7 +22,19 @@ public class ListeCourse extends ChangePage implements Initializable {
     public ListView listeCourse;
 
     public void acheter() {
-        changePage(FXML_FILE_PATH1,acheter);
+        int selectedID = listeCourse.getSelectionModel().getSelectedIndex();
+
+        Aliment aliment = CourseJsonReader.getAliment(selectedID);
+
+        //ajoute l'aliment au fichier json de réfrigérateur
+        RefrigerateurJsonReader.addAliment(aliment);
+
+        //retire l'aliment du fichier json
+        CourseJsonReader.removeAliment(selectedID);
+
+        //retire l'aliment de la liste de l'interface
+        listeCourse.getItems().remove(selectedID);
+
     }
 
     public void ajouterCourse() {
@@ -29,14 +43,13 @@ public class ListeCourse extends ChangePage implements Initializable {
 
     public void allerPageAccueil() {
         changePage(FXML_FILE_PATH1,revenirArriereListeCourse);
-
     }
 
     private void afficherListeCourse(){
         ArrayList<String> ingredients = CourseJsonReader.getListeCourse();
-        for(int i=0;i<ingredients.size();i++){
-            listeCourse.getItems().add(ingredients.get(i));
-            System.out.println(ingredients.get(i));
+        for (String ingredient : ingredients) {
+            listeCourse.getItems().add(ingredient);
+            System.out.println(ingredient);
         }
     }
 

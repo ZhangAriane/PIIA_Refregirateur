@@ -1,17 +1,4 @@
 [ {
-  "nomRecette" : "Salade César",
-  "ingredients" : [ {
-    "nom" : "Salade",
-    "type" : "Fruits et légumes",
-    "taille" : 1,
-    "unite" : 1
-  }, {
-    "nom" : "Citron",
-    "type" : "Fruits et légumes",
-    "taille" : 1,
-    "unite" : 1
-  } ]
-}, {
   "nomRecette" : "Tarte aux poireaux et aux lardons",
   "ingredients" : [ {
     "nom" : "Poireaux",
@@ -334,26 +321,8 @@
     "unite" : 1
   } ]
 }, {
-  "nomRecette" : "Andouille de porc",
+  "nomRecette" : "test",
   "ingredients" : [ {
-    "nom" : "Oignon",
-    "type" : "Fruits et légumes",
-    "taille" : 1,
-    "unite" : 1
-  }, {
-    "nom" : "Oignon",
-    "type" : "Fruits et légumes",
-    "taille" : 1,
-    "unite" : 1
-  } ]
-}, {
-  "nomRecette" : "Boulette de porc",
-  "ingredients" : [ {
-    "nom" : "Oignon",
-    "type" : "Fruits et légumes",
-    "taille" : 1,
-    "unite" : 1
-  }, {
     "nom" : "Oignon",
     "type" : "Fruits et légumes",
     "taille" : 1,

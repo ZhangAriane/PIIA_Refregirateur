@@ -1,6 +1,7 @@
 package Model.json;
 
 import Model.Aliment;
+import Model.Recette;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -64,6 +65,55 @@ public class CourseJsonReader {
         }catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Supprime un aliment du fichier json
+     * @param index l'index de l'aliment
+     */
+    public static void removeAliment(int index){
+        try {
+            //Lecture du fichier JSON existant
+            File file = new File("src/main/resources/json/courses.json");
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            //sérialisation
+            ArrayList<Aliment> courses  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
+
+            //retire la recette
+            courses.remove(index);
+            //mise à jour du fichier json
+            JsonGenerator jsonGenerator = objectMapper.getFactory().createGenerator(
+                    new File("src/main/resources/json/courses.json"), JsonEncoding.UTF8);
+            jsonGenerator.setPrettyPrinter(new DefaultPrettyPrinter());
+            objectMapper.writeValue(jsonGenerator, courses);
+
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Cherche la recette correspondante au nom de recette
+     * @param index de la recette
+     * @return recette
+     */
+    public static Aliment getAliment(int  index){
+        try {
+            //Lecture du fichier JSON existant
+            File file = new File("src/main/resources/json/courses.json");
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            //sérialisation
+            ArrayList<Aliment> courses  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
+
+
+            return courses.get(index);
+
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
 }
