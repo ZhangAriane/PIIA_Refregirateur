@@ -1,6 +1,7 @@
 package Model.json;
 
 import Model.Aliment;
+import Model.Recette;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -49,6 +50,38 @@ public class RefrigerateurJsonReader {
 
             //ajoute un aliment
             aliments.add(aliment);
+
+            //mise à jour du fichier json
+            JsonGenerator jsonGenerator = objectMapper.getFactory().createGenerator(
+                    new File("src/main/resources/json/refrigerateur.json"), JsonEncoding.UTF8);
+            jsonGenerator.setPrettyPrinter(new DefaultPrettyPrinter());
+            objectMapper.writeValue(jsonGenerator, aliments);
+
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Supprime une recette du fichier json
+     * @param ingredients listes des noms des aliments a supprimer
+     */
+    public static void removeAliment(ArrayList<String> ingredients){
+        try {
+            //Lecture du fichier JSON existant
+            File file = new File("src/main/resources/json/refrigerateur.json");
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            //sérialisation
+            ArrayList<Aliment> aliments  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
+
+            //retire la recette
+            for(int i=0; i<ingredients.size();i++){
+                for(int j=0; j<aliments.size();j++){
+                    if(aliments.get(j).getNom().equals(ingredients.get(i)))
+                        aliments.remove(i);
+                }
+            }
 
             //mise à jour du fichier json
             JsonGenerator jsonGenerator = objectMapper.getFactory().createGenerator(

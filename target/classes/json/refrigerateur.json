@@ -13,4 +13,9 @@
   "type" : "Bouteilles",
   "taille" : 1,
   "unite" : 1
+}, {
+  "nom" : "Oignon",
+  "type" : "Fruits et légumes",
+  "taille" : 1,
+  "unite" : 1
 } ]

@@ -29,19 +29,16 @@ public class DetailleRecette extends ChangePage implements Initializable {
 
 
     public Text nomRecette;
-    public ListView listeIngredients;
+    public ListView<String> listeIngredients;
 
     public void cuisinier() {
+        miseAJourFrigo();
         changePage(FXML_FILE_PATH1,cuisinier);
     }
 
-    public void diminierPersonne() {
+    public void diminierPersonne() {}
 
-    }
-
-    public void ajouterPersonne() {
-
-    }
+    public void ajouterPersonne() {}
 
     public void allerPageListeRecette() {
         changePage(FXML_FILE_PATH2,boutonRevenierArriere);
@@ -80,22 +77,30 @@ public class DetailleRecette extends ChangePage implements Initializable {
      * sinon en rouge
      */
     private void metCouleur(){
-            listeIngredients.setCellFactory(listeIngredients -> new ListCell<String>(){
-                @Override
-                protected void updateItem(String item, boolean empty){
-                    super.updateItem(item, empty);
-                    setText(item);
-                    if (!empty) {
-                        System.out.println(getText());
-                        // Change la couleur de fond en fonction du stock du réfrigérateur
-                        if(RefrigerateurJsonReader.exist(getText()))
-                            setBackground(new Background(new BackgroundFill(Color.rgb(162, 217, 0), null, null)));
-                        else
-                            setBackground(new Background(new BackgroundFill(Color.rgb(233, 109, 78), null, null)));
-                    }
+        listeIngredients.setCellFactory(listeIngredients -> new ListCell<String>(){
+             @Override
+             protected void updateItem(String item, boolean empty){
+                super.updateItem(item, empty);
+                setText(item);
+                if (!empty) {
+                    // Change la couleur de fond en fonction du stock du réfrigérateur
+                    if(RefrigerateurJsonReader.exist(getText()))
+                        setBackground(new Background(new BackgroundFill(Color.rgb(162, 217, 0), null, null)));
+                    else
+                        setBackground(new Background(new BackgroundFill(Color.rgb(233, 109, 78), null, null)));
                 }
-            });
-        }
+             }
+        });
+    }
 
+
+    private void miseAJourFrigo(){
+        ArrayList<String> aliments = new ArrayList<>();
+        for (String aliment : listeIngredients.getItems()) {
+            aliments.add(aliment);
+        }
+        RefrigerateurJsonReader.removeAliment(aliments);
+
+    }
 
 }
