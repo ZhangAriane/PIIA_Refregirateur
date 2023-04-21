@@ -23,4 +23,9 @@
   "type" : "Viandes",
   "taille" : 1,
   "unite" : 1
+}, {
+  "nom" : "vermicelle",
+  "type" : "Pates",
+  "taille" : 1,
+  "unite" : 1
 } ]

@@ -1,41 +1,21 @@
 [ {
-  "nom" : "Eau",
-  "type" : "Bouteilles",
+  "nom" : "Poireaux",
+  "type" : "Fruits et légumes",
   "taille" : 1,
   "unite" : 1
 }, {
-  "nom" : "Eau",
-  "type" : "Bouteilles",
-  "taille" : 1,
-  "unite" : 1
-}, {
-  "nom" : "Eau",
-  "type" : "Bouteilles",
-  "taille" : 1,
-  "unite" : 1
-}, {
-  "nom" : "Boeuf",
+  "nom" : "Lardon",
   "type" : "Viandes",
   "taille" : 1,
   "unite" : 1
 }, {
-  "nom" : "Boeuf",
-  "type" : "Viandes",
+  "nom" : "Oignon",
+  "type" : "Fruits et légumes",
   "taille" : 1,
   "unite" : 1
 }, {
-  "nom" : "Boeuf",
-  "type" : "Viandes",
-  "taille" : 1,
-  "unite" : 1
-}, {
-  "nom" : "Boeuf",
-  "type" : "Viandes",
-  "taille" : 1,
-  "unite" : 1
-}, {
-  "nom" : "Pate",
-  "type" : "Pates",
+  "nom" : "Pomme de terre",
+  "type" : "Fruits et légumes",
   "taille" : 1,
   "unite" : 1
 }, {
@@ -44,23 +24,8 @@
   "taille" : 1,
   "unite" : 1
 }, {
-  "nom" : "Pomme",
-  "type" : "Fruits et légumes",
-  "taille" : 1,
-  "unite" : 1
-}, {
-  "nom" : "Banane",
-  "type" : "Fruits et légumes",
-  "taille" : 1,
-  "unite" : 1
-}, {
-  "nom" : "Oignon",
-  "type" : "Fruits et légumes",
-  "taille" : 1,
-  "unite" : 1
-}, {
-  "nom" : "Oignon",
-  "type" : "Fruits et légumes",
+  "nom" : "vermicelle",
+  "type" : "Pates",
   "taille" : 1,
   "unite" : 1
 } ]

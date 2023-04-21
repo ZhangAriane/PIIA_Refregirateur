@@ -1,1 +1,11 @@
-[ ]
+[ {
+  "nom" : "Blanc de poulet",
+  "type" : "Viandes",
+  "taille" : 1,
+  "unite" : 1
+}, {
+  "nom" : "Sauce soja",
+  "type" : "Bouteilles",
+  "taille" : 1,
+  "unite" : 1
+} ]
