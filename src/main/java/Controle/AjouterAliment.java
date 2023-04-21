@@ -7,7 +7,7 @@ import Model.Aliment;
 
 
 public class AjouterAliment extends ChangePage {
-    private static final String FXML_FILE_PATH = "/FXML/Réfrigérateur.fxml";
+    private static final String FXML_FILE_PATH = "/FXML/Refrigerateur.fxml";
 
     public Button validerAjouterAliment;
     public Button revenirArriereAjouterAliment;

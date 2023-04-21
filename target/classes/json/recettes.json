@@ -320,4 +320,12 @@
     "taille" : 1,
     "unite" : 1
   } ]
+}, {
+  "nomRecette" : "test",
+  "ingredients" : [ {
+    "nom" : "Oignon",
+    "type" : "Fruits et légumes",
+    "taille" : 1,
+    "unite" : 1
+  } ]
 } ]

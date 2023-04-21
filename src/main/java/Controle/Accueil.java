@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 public class Accueil extends ChangePage {
     private static final String FXML_FILE_PATH1 = "/FXML/Liste_de_Recettes.fxml";
     private static final String FXML_FILE_PATH2 = "/FXML/Liste_de_Course.fxml";
-    private static final String FXML_FILE_PATH3 = "/FXML/Réfrigérateur.fxml";
+    private static final String FXML_FILE_PATH3 = "/FXML/Refrigerateur.fxml";
 
 
     public Button refrigerateur;
