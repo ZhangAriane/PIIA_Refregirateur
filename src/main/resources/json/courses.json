@@ -8,4 +8,14 @@
   "type" : "Bouteilles",
   "taille" : 1,
   "unite" : 1
+}, {
+  "nom" : "Poireaux",
+  "type" : "Fruits et légumes",
+  "taille" : 1,
+  "unite" : 1
+}, {
+  "nom" : "Lardon",
+  "type" : "Viandes",
+  "taille" : 1,
+  "unite" : 1
 } ]
