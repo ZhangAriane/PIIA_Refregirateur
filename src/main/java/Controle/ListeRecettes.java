@@ -1,6 +1,7 @@
 package Controle;
 
 import Model.Aliment;
+import Model.json.CourseJsonReader;
 import Model.json.RecetteJsonReader;
 import Model.json.RefrigerateurJsonReader;
 import javafx.fxml.Initializable;
@@ -8,11 +9,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.LinearGradient;
 
 import java.net.URL;
 import java.sql.Ref;
@@ -47,9 +46,19 @@ public class ListeRecettes extends ChangePage implements Initializable  {
 
     }
 
-    public void allerPageListeCourse() {
-        changePage(FXML_FILE_PATH3,panier);
+    public void ajouterCourse() {
+        int selectedID = listeRecette.getSelectionModel().getSelectedIndex();
+        if(selectedID != -1) {
+            listeRecette.getSelectionModel().clearSelection();
+            ArrayList<Aliment> ingredients = RecetteJsonReader.getIngredients(selectedID);
 
+            for (int i = 0; i < ingredients.size(); i++) {
+                CourseJsonReader.addCourse(ingredients.get(i));
+                System.out.println(ingredients.get(i).getClass());
+            }
+        }else {
+            changePage(FXML_FILE_PATH3, panier);
+        }
     }
 
 
@@ -105,8 +114,8 @@ public class ListeRecettes extends ChangePage implements Initializable  {
                 super.updateItem(item, empty);
                 setText(item);
                 if (!empty) {
-                    ArrayList<Aliment> aliments = RefrigerateurJsonReader.getAliment();
-                    ArrayList<Aliment> ingredients =  RecetteJsonReader.getIngredients(getIndex());
+                    ArrayList<String> aliments = RefrigerateurJsonReader.getAlimentNom();
+                    ArrayList<String> ingredients =  RecetteJsonReader.getIngredientsNom(getIndex());
                     if (contient(ingredients,aliments)) {
                         setBackground(new Background(new BackgroundFill(Color.rgb(162, 217, 0), null, null)));
                     } else {
@@ -124,14 +133,14 @@ public class ListeRecettes extends ChangePage implements Initializable  {
      * @return true si tous les ingrédients sont dans le réfrigérateur
      * sinon false
      */
-    private Boolean contient(ArrayList<Aliment> ingredients, ArrayList<Aliment> aliments){
+    private Boolean contient(ArrayList<String> ingredients, ArrayList<String> aliments){
         int temp =0;
         for(int i=0; i<ingredients.size();i++) {
             Boolean retirer = false;
             for (int j = 0; j < aliments.size(); j++) {
-                if (ingredients.get(i).getNom().equals(aliments.get(j).getNom()) && !retirer) {
+                if (ingredients.get(i).equals(aliments.get(j)) && !retirer) {
                     retirer = true;
-                    aliments.remove(aliments.get(i));
+                    aliments.remove(ingredients.get(i));
                     temp += 1;
                 }
             }

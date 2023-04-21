@@ -1,7 +1,6 @@
 package Model.json;
 
 import Model.Aliment;
-import Model.Recette;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -16,7 +15,7 @@ public class CourseJsonReader {
 
     /**
      * Lit le fichier json et renvoie une liste de course
-     * @return la liste des courses
+     * @return la liste des noms des courses
      */
     public static ArrayList<String> getListeCourse(){
         ArrayList<String> ingredients = new ArrayList<>();
@@ -33,6 +32,29 @@ public class CourseJsonReader {
                 ingredients.add(aliment.getNom());
 
             }
+
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return ingredients;
+    }
+
+    /**
+     * Lit le fichier json et renvoie une liste de course
+     * @return la liste des courses
+     */
+    public static ArrayList<Aliment> getCourse(){
+        ArrayList<Aliment> ingredients = new ArrayList<>();
+        try {
+            //Lecture du fichier JSON existant
+            File file = new File("src/main/resources/json/courses.json");
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            //sérialisation
+            ArrayList<Aliment> aliments  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
+
+            ingredients = aliments;
+
 
         }catch (IOException e) {
             e.printStackTrace();
@@ -80,8 +102,41 @@ public class CourseJsonReader {
             //sérialisation
             ArrayList<Aliment> courses  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
 
-            //retire la recette
+            //retire l'aliment
             courses.remove(index);
+            //mise à jour du fichier json
+            JsonGenerator jsonGenerator = objectMapper.getFactory().createGenerator(
+                    new File("src/main/resources/json/courses.json"), JsonEncoding.UTF8);
+            jsonGenerator.setPrettyPrinter(new DefaultPrettyPrinter());
+            objectMapper.writeValue(jsonGenerator, courses);
+
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Supprime un aliment du fichier json
+     * @param aliment aliment
+     */
+    public static void removeAliment(String aliment){
+        try {
+            //Lecture du fichier JSON existant
+            File file = new File("src/main/resources/json/courses.json");
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            //sérialisation
+            ArrayList<Aliment> courses  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
+
+            //retire l'aliment
+            Boolean retirer = false;
+            for(int i=0; i<courses.size(); i++){
+                if(!retirer && courses.get(i).getNom().equals(aliment)){
+                    courses.remove(i);
+                    retirer = true;
+                }
+            }
+
             //mise à jour du fichier json
             JsonGenerator jsonGenerator = objectMapper.getFactory().createGenerator(
                     new File("src/main/resources/json/courses.json"), JsonEncoding.UTF8);
@@ -98,7 +153,8 @@ public class CourseJsonReader {
      * @param index de la recette
      * @return recette
      */
-    public static Aliment getAliment(int  index){
+    public static Aliment getAliment(int index){
+        Aliment aliments = new Aliment("","", 0,0);
         try {
             //Lecture du fichier JSON existant
             File file = new File("src/main/resources/json/courses.json");
@@ -107,13 +163,13 @@ public class CourseJsonReader {
             //sérialisation
             ArrayList<Aliment> courses  = objectMapper.readValue(file, new TypeReference<ArrayList<Aliment>>() {});
 
-
-            return courses.get(index);
+            System.out.println("course size " + courses.size());
+            aliments =  courses.get(index);
 
         }catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+        return aliments;
     }
 
 }

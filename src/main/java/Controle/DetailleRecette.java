@@ -19,8 +19,7 @@ import java.util.ResourceBundle;
 
 
 public class DetailleRecette extends ChangePage implements Initializable {
-    private static final String FXML_FILE_PATH1 = "/FXML/Accueil.fxml";
-    private static final String FXML_FILE_PATH2 = "/FXML/Liste_de_Recettes.fxml";
+    private static final String FXML_FILE_PATH = "/FXML/Liste_de_Recettes.fxml";
 
     public Button cuisinier;
     public Button diminierPersonne;
@@ -33,7 +32,7 @@ public class DetailleRecette extends ChangePage implements Initializable {
 
     public void cuisinier() {
         miseAJourFrigo();
-        changePage(FXML_FILE_PATH2,cuisinier);
+        changePage(FXML_FILE_PATH,cuisinier);
     }
 
     public void diminierPersonne() {}
@@ -41,7 +40,7 @@ public class DetailleRecette extends ChangePage implements Initializable {
     public void ajouterPersonne() {}
 
     public void allerPageListeRecette() {
-        changePage(FXML_FILE_PATH2,boutonRevenierArriere);
+        changePage(FXML_FILE_PATH,boutonRevenierArriere);
     }
 
     @Override
@@ -63,14 +62,10 @@ public class DetailleRecette extends ChangePage implements Initializable {
 
         for (Aliment ingredient : ingredients) {
             String nom = ingredient.getNom();
-            String unite = Integer.toString(ingredient.getUnite());
-
             listeIngredients.getItems().add(nom);
-
             }
-
         }
-
+/*
     /**
      * Change la couleur de la ligne de la liste
      * si l'ingrédient est dans le réfrigérateur, affiche en vert

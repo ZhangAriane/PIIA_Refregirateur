@@ -7,7 +7,6 @@ import Model.json.RefrigerateurJsonReader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -21,21 +20,35 @@ public class ListeCourse extends ChangePage implements Initializable {
     public Button acheter;
     public Button ajouterCourse;
     public Button revenirArriereListeCourse;
-    public ListView listeCourse;
+    public ListView<String> listeCourse;
 
     public void acheter() {
         int selectedID = listeCourse.getSelectionModel().getSelectedIndex();
+        if(selectedID !=-1) {
+            System.out.println(selectedID);
+            Aliment aliment = CourseJsonReader.getAliment(selectedID);
 
-        Aliment aliment = CourseJsonReader.getAliment(selectedID);
+            //ajoute l'aliment au fichier json de réfrigérateur
+            RefrigerateurJsonReader.addAliment(aliment);
 
-        //ajoute l'aliment au fichier json de réfrigérateur
-        RefrigerateurJsonReader.addAliment(aliment);
+            //retire l'aliment du fichier json
+            CourseJsonReader.removeAliment(selectedID);
 
-        //retire l'aliment du fichier json
-        CourseJsonReader.removeAliment(selectedID);
+            //retire l'aliment de la liste de l'interface
+            listeCourse.getItems().remove(selectedID);
+        }
+        else{
+            ArrayList<Aliment> courses = CourseJsonReader.getCourse();
+            System.out.println(courses.size());
+            for(int i=0; i<courses.size(); i++){
+                System.out.println(i);
+                Aliment aliment = courses.get(i);
+                CourseJsonReader.removeAliment(aliment.getNom());
+                RefrigerateurJsonReader.addAliment(aliment);
+            }
 
-        //retire l'aliment de la liste de l'interface
-        listeCourse.getItems().remove(selectedID);
+            listeCourse.getItems().clear();
+        }
 
     }
 

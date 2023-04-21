@@ -68,9 +68,10 @@ public class RecetteJsonReader {
     /**
      * Cherche les ingrédients de la recette correspondante
      * @param index de la recette
-     * @return ingrédients
+     * @return nom des ingrédients
      */
     public static ArrayList<Aliment> getIngredients(int index){
+        ArrayList<Aliment> ingredients = new ArrayList<>();
         try {
             //Lecture du fichier JSON existant
             File file = new File("src/main/resources/json/recettes.json");
@@ -79,12 +80,37 @@ public class RecetteJsonReader {
             //sérialisation
             ArrayList<Recette> recettes  = objectMapper.readValue(file, new TypeReference<ArrayList<Recette>>() {});
 
-            return recettes.get(index).getIngredients();
+            ingredients =  recettes.get(index).getIngredients();
 
         }catch (IOException e) {
             e.printStackTrace();
         }
-        return null;
+        return ingredients;
+    }
+
+    /**
+     * Cherche les ingrédients de la recette correspondante
+     * @param index de la recette
+     * @return nom des ingrédients
+     */
+    public static ArrayList<String> getIngredientsNom(int index){
+        ArrayList<String> noms = new ArrayList<>();
+        try {
+            //Lecture du fichier JSON existant
+            File file = new File("src/main/resources/json/recettes.json");
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            //sérialisation
+            ArrayList<Recette> recettes  = objectMapper.readValue(file, new TypeReference<ArrayList<Recette>>() {});
+
+            for(int i=0; i<recettes.get(index).getIngredients().size();i++){
+                noms.add(recettes.get(index).getIngredients().get(i).getNom());
+            }
+
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+        return noms;
     }
 
 
